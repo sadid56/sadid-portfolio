@@ -21,7 +21,7 @@ const About = () => {
       <div className="relative">
       <div className="flex items-center mt-10">
       <div className="flex-1 ">
-          <img src={aboutImg} className="w-[300px]" alt="" />
+          <img src={aboutImg} className="w-[300px] border-2 rounded-md border-red-600" alt="" />
         </div>
       <div className="flex-1 space-y-5">
           <h3 className="text-white text-xl font-medium">

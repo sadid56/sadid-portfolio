@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "project_name": "strong",
+    "description": "FitHub, a MERN website, simplifies your fitness journey. Personalized plans, real-time tracking, and community support make achieving your health goals effortless. Start today for a healthier tomorrow.",
+    "project_thumnail": "https://i.ibb.co/xHLtwtV/assignment-12-6812f-web-app-1.png",
+    "technology": ["React", "Tailwindcss", "Jwt", "MongoDB", "ExpressJs"],
+    "project_source": [
+      {
+        "client_github_link": "https://github.com/programming-hero-web-course1/b8a12-client-side-sadid56"
+      },
+      {
+        "server_github_link": "https://github.com/programming-hero-web-course1/b8a12-server-side-sadid56"
+      },
+      {
+        "live_link": "https://assignment-12-6812f.web.app/"
+      }
+    ]
+  }
+]

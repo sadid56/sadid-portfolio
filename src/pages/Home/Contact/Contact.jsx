@@ -44,7 +44,7 @@ const Contact = () => {
     <div className="max-w-4xl mx-auto">
       <SectionTitle color={"Contact"} text={"Me"} />
       {/* address */}
-      <div className="grid grid-cols-3 gap-5">
+      <div style={{backdropFilter: 'blur(50px)'}} className="grid grid-cols-3 gap-5 bg-slate-900 p-5 rounded-md shadow-md bg-opacity-40">
         <div className="text-center space-y-1">
           <div className="w-14 mx-auto">
             <img src={phonePng} alt="" />
@@ -106,7 +106,7 @@ const Contact = () => {
               <textarea
                 className="bg-transparent border-2 border-slate-500 focus:border-[#e00549] outline-none px-5 py-2 rounded "
                 name="message"
-                cols="45"
+                cols="50"
                 {...register("message")}
                 placeholder="Your Message..."
                 required
