@@ -4,13 +4,19 @@ import codingAnimatoin from "../../../assets/lottie-animation/coding.json";
 import { Typewriter } from "react-simple-typewriter";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaGithub   } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import helloAnimation from '../../../assets/lottie-animation/hello.json'
 const Banner = () => {
     
   return (
     <div className="w-full bg-[#010610]">
       <div className="flex h-screen items-center gap-10 max-w-6xl mx-auto">
         <div className="text-white flex-1 w-1/2 space-y-3">
-          <h1 className=" font-semibold uppercase">Hello There</h1>
+          <div className=" font-semibold uppercase flex items-center gap-3">
+            <div className="w-16 bg-white rounded-md">
+            <Lottie animationData={helloAnimation}/>
+            </div>
+            <h2>There</h2>
+            </div>
           <h1 className="text-4xl font-bold">
             I am <span className="text-[#e00549]">Sadid</span>
           </h1>

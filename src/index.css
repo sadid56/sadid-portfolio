@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .text-color-change {
-    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c3, red);
+    background: linear-gradient(90deg, #ff0000,  #ff00f3, #0033ff, #ff00c3, red);
     background-size: 400%;
     -webkit-background-clip: text;
     color: transparent;

@@ -1,11 +1,29 @@
+/* eslint-disable react/no-unescaped-entities */
+import Lottie from "lottie-react";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
+import aboutImg from '../../../assets/images/me-about.jpg'
+import rocketAnimatiom from '../../../assets/lottie-animation/about-rocket.json'
+import aboutWelcomeAnimation from '../../../assets/lottie-animation/cute-welcome.json'
 
 const About = () => {
   return (
-    <section id="about">
+    <section id="about" className="max-w-4xl mx-auto">
       <SectionTitle color={"About"} text={"Me"}/>
-      <div className="flex items-center max-w-6xl mx-auto">
-      <div className="flex-1 space-y-2">
+      <div className="space-y-5">
+          <h2 className="text-xl font-semibold text-color-change">
+            Introduction
+          </h2>
+          <p>
+          Hello, I'm Sadid, a skilled MERN stack web developer. With a passion for creating seamless digital experiences, I specialize in crafting efficient and user-friendly applications. My expertise spans MongoDB, Express.js, React, and Node.js, allowing me to deliver end-to-end solutions. I thrive on challenges, continuously learn, and am committed to turning your ideas into powerful online realities. Let's collaborate and build something extraordinary.
+          </p>
+         
+        </div>
+      <div className="relative">
+      <div className="flex items-center mt-10">
+      <div className="flex-1 ">
+          <img src={aboutImg} className="w-[300px]" alt="" />
+        </div>
+      <div className="flex-1 space-y-5">
           <h3 className="text-white text-xl font-medium">
             <span className="text-[#e00549]">Name</span>: Sadid Hasan
           </h3>
@@ -25,18 +43,6 @@ const About = () => {
           <h3 className="text-white text-xl font-medium">
             <span className="text-[#e00549]">Habbit</span>: Gaming, Music,
           </h3>
-        </div>
-        <div className="flex-1 space-y-5">
-          <h2 className="text-xl font-semibold text-color-change">
-            Introduction
-          </h2>
-          <p>
-            My journey began with a fascination for the ever-evolving world of
-            technology, and it has led me to specialize in the MERN stack –
-            harnessing the power of React.js for intuitive user interfaces,
-            Node.js for efficient server-side logic, and MongoDB for seamless
-            data management.
-          </p>
           <a
             href="#_"
             className="relative inline-flex bg-transparent items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-[#e00549] text-xl transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 border border-[#e00549] group">
@@ -73,8 +79,18 @@ const About = () => {
             </span>
           </a>
         </div>
+
+        
         
       </div>
+      <div className="w-[300px] absolute -right-36 top-36 ">
+        <Lottie animationData={rocketAnimatiom}/>
+      </div>
+      <div className="w-[100px] -bottom-4 left-52 absolute">
+        <Lottie animationData={aboutWelcomeAnimation}/>
+      </div>
+      </div>
+        
     </section>
   );
 };
