@@ -2,7 +2,7 @@
 
 const SkillsItems = ({ skills}) => {
   return (
-    <div className="mt-10 grid grid-cols-6 gap-7 mb-20">
+    <div className="mt-10 grid grid-cols-2 mx-3  md:grid-cols-4 lg:grid-cols-6 gap-7 mb-20">
       {skills?.map((skill) => (
         <div style={{boxShadow: '0px 0px 10px 2px #f13b81'}} key={skill?.id} className="bg-[#1e293b] p-4 rounded-md">
             <div className="w-10  mx-auto">

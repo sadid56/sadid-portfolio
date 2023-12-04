@@ -5,12 +5,13 @@ import { Typewriter } from "react-simple-typewriter";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaGithub   } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import helloAnimation from '../../../assets/lottie-animation/hello.json'
+import './banner.css'
 const Banner = () => {
     
-  return (
-    <div className="w-full bg-[#010610]">
-      <div className="flex h-screen items-center gap-10 max-w-6xl mx-auto">
-        <div className="text-white flex-1 w-1/2 space-y-3">
+  return ( 
+    <div className="w-full bg-grad py-5 hidden">
+      <div className="flex flex-col-reverse md:flex-row h-screen pt-10 items-center gap-10 max-w-6xl mx-auto">
+        <div className="text-white flex-1 md:w-1/2 space-y-3">
           <div className=" font-semibold uppercase flex items-center gap-3">
             <div className="w-16 bg-white rounded-md">
             <Lottie animationData={helloAnimation}/>
@@ -20,22 +21,22 @@ const Banner = () => {
           <h1 className="text-4xl font-bold">
             I am <span className="text-[#e00549]">Sadid</span>
           </h1>
-          <h1 className="text-5xl font-bold text-white text-color-change">
+          <h1 className=" text-3xl md:text-5xl font-bold text-white text-color-change">
             
               {/* Style will be inherited from the parent element */}
               <Typewriter
-                words={["MERN stack Web Developer", "React Developer", "Web Designer"]}
+                words={["MERN stack Developer", "React Developer", "Web Designer"]}
                 loop={Infinity}
                 cursor
                 cursorStyle="|"
                 cursorColor="white"
-                typeSpeed={100}
+                typeSpeed={200}
                 deleteSpeed={30}
-                delaySpeed={1500}
+                delaySpeed={2000}
               />
             
           </h1>
-          <h1 className=" text-white ">
+          <h1 className="  cursive-font text-slate-300">
             
               {/* Style will be inherited from the parent element */}
               <Typewriter
@@ -56,7 +57,7 @@ const Banner = () => {
           <button style={{boxShadow: '0px 0px 10px 2px #f13b81'}} className="btn btn-circle btn-sm border bg-transparent border-[#f13b81] hover:bg-[#f13b81] hover:text-white text-[#f13b81] hover:border-white"><FaGithub /></button>
           </div>
         </div>
-        <div className="w-[450px]">
+        <div className=" md:w-[450px]">
           <Lottie animationData={codingAnimatoin} loop={true} />
         </div>
       </div>

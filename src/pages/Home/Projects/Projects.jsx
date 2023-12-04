@@ -21,7 +21,7 @@ const Projects = () => {
   return (
     <section className="max-w-6xl mx-auto">
       <SectionTitle color={"Projects"} />
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-2 mx-3 lg:grid-cols-3 gap-5">
         {projects.map((project) => (
           <div
             key={project?.id}

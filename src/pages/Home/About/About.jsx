@@ -7,40 +7,43 @@ import aboutWelcomeAnimation from '../../../assets/lottie-animation/cute-welcome
 
 const About = () => {
   return (
-    <section id="about" className="max-w-4xl mx-auto">
+    <section id="about" className="max-w-4xl mx-auto relative">
       <SectionTitle color={"About"} text={"Me"}/>
-      <div className="space-y-5">
+      <div className="space-y-5 mx-3">
           <h2 className="text-xl font-semibold text-color-change">
             Introduction
           </h2>
-          <p>
+          <p className="cursive-font text-slate-400">
           Hello, I'm Sadid, a skilled MERN stack web developer. With a passion for creating seamless digital experiences, I specialize in crafting efficient and user-friendly applications. My expertise spans MongoDB, Express.js, React, and Node.js, allowing me to deliver end-to-end solutions. I thrive on challenges, continuously learn, and am committed to turning your ideas into powerful online realities. Let's collaborate and build something extraordinary.
           </p>
          
         </div>
-      <div className="relative">
-      <div className="flex items-center mt-10">
-      <div className="flex-1 ">
+      <div className="">
+      <div className="flex gap-5 flex-col md:flex-row items-center mt-10">
+      <div className="flex-1 relative">
           <img src={aboutImg} className="w-[300px] border-2 rounded-md border-red-600" alt="" />
+          <div className="w-[100px] -bottom-3 left-52 absolute">
+        <Lottie animationData={aboutWelcomeAnimation}/>
+      </div>
         </div>
       <div className="flex-1 space-y-5">
-          <h3 className="text-white text-xl font-medium">
+          <h3 className="text-slate-400 text-xl font-medium">
             <span className="text-[#e00549]">Name</span>: Sadid Hasan
           </h3>
-          <h3 className="text-white text-xl font-medium">
+          <h3 className="text-slate-400 text-xl font-medium">
             <span className="text-[#e00549]">Age</span>: 20
           </h3>
-          <h3 className="text-white text-xl font-medium">
+          <h3 className="text-slate-400 text-xl font-medium">
             <span className="text-[#e00549]">Education</span>: HSC (Science)
           </h3>
-          <h3 className="text-white text-xl font-medium">
+          <h3 className="text-slate-400 text-xl font-medium">
             <span className="text-[#e00549]">Language</span>: Bangla, Hindi,
             English
           </h3>
-          <h3 className="text-white text-xl font-medium">
+          <h3 className="text-slate-400 text-xl font-medium">
             <span className="text-[#e00549]">Role</span>: React Developer
           </h3>
-          <h3 className="text-white text-xl font-medium">
+          <h3 className="text-slate-400 text-xl font-medium">
             <span className="text-[#e00549]">Habbit</span>: Gaming, Music,
           </h3>
           <a
@@ -74,7 +77,7 @@ const About = () => {
                   d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
             </span>
-            <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
+            <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-slate-400">
               Download CV
             </span>
           </a>
@@ -83,12 +86,10 @@ const About = () => {
         
         
       </div>
-      <div className="w-[300px] absolute -right-36 top-36 ">
+      <div className="w-[200px] md:w-[300px] absolute -right-10 md:-right-36 top-16 md:top-[400px]">
         <Lottie animationData={rocketAnimatiom}/>
       </div>
-      <div className="w-[100px] -bottom-4 left-52 absolute">
-        <Lottie animationData={aboutWelcomeAnimation}/>
-      </div>
+      
       </div>
         
     </section>

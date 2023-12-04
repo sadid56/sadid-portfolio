@@ -44,7 +44,7 @@ const Contact = () => {
     <div className="max-w-4xl mx-auto">
       <SectionTitle color={"Contact"} text={"Me"} />
       {/* address */}
-      <div style={{backdropFilter: 'blur(50px)'}} className="grid grid-cols-3 gap-5 bg-slate-900 p-5 rounded-md shadow-md bg-opacity-40">
+      <div  className="grid md:grid-cols-3 gap-10 mx-3 bg-slate-900 p-5 rounded-md shadow-md bg-opacity-60">
         <div className="text-center space-y-1">
           <div className="w-14 mx-auto">
             <img src={phonePng} alt="" />
@@ -75,8 +75,8 @@ const Contact = () => {
       </div>
       <div className="mt-10">
         <form  onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="text-xl font-medium mb-5">Have a question ?</h2>
-          <div className="flex items-center  gap-10">
+          <h2 className="text-xl text-center md:text-start font-medium mb-5">Have a question ?</h2>
+          <div className="flex  flex-col md:flex-row items-center  gap-10">
             <div className="flex-1 space-y-6">
               <input
                 className="bg-transparent border-2 border-slate-500 focus:border-[#e00549] outline-none px-5  py-2 rounded w-full "
@@ -104,9 +104,9 @@ const Contact = () => {
             </div>
             <div className="flex-1">
               <textarea
-                className="bg-transparent border-2 border-slate-500 focus:border-[#e00549] outline-none px-5 py-2 rounded "
+                className="bg-transparent border-2 border-slate-500 focus:border-[#e00549] outline-none px-5 py-2 rounded  w-full"
                 name="message"
-                cols="50"
+                cols=""
                 {...register("message")}
                 placeholder="Your Message..."
                 required

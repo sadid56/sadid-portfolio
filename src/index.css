@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Caveat:wght@400;500;600;700&family=Ephesis&display=swap');
+
+.cursive-font{
+    font-family: 'Caveat', cursive;
+}
+.italic-font{
+    font-family: 'Beau Rivage', cursive;
+}
 .text-color-change {
     background: linear-gradient(90deg, #ff0000,  #ff00f3, #0033ff, #ff00c3, red);
     background-size: 400%;
