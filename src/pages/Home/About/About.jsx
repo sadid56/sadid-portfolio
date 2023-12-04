@@ -21,7 +21,7 @@ const About = () => {
       <div className="">
       <div className="flex gap-5 flex-col md:flex-row items-center mt-10">
       <div className="flex-1 relative">
-          <img src={aboutImg} className="w-[300px] border-2 rounded-md border-red-600" alt="" />
+          <img src={aboutImg} className="w-[300px] border-[#e00549] border-r-2 border-b-2" alt="" />
           <div className="w-[100px] -bottom-3 left-52 absolute">
         <Lottie animationData={aboutWelcomeAnimation}/>
       </div>
@@ -86,7 +86,7 @@ const About = () => {
         
         
       </div>
-      <div className="w-[200px] md:w-[300px] absolute -right-10 md:-right-36 top-16 md:top-[400px]">
+      <div className="w-[200px] md:w-[300px] absolute -right-10 md:-right-36 top-16 md:top-[400px] hidden lg:flex">
         <Lottie animationData={rocketAnimatiom}/>
       </div>
       
