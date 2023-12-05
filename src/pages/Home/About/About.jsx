@@ -11,12 +11,12 @@ const About = () => {
           <div className="flex-1 relative">
             <img
               src={aboutImg}
-              className="md:w-[300px] border-[#03e9f4] border-r-2 p-2 border-b-2"
+              className="md:w-[300px] border-[#32a7ae] border-r-[2px] p-2 border-b-[2px]"
               alt=""
             />
           </div>
           <div className=" flex-1 space-y-5 mx-3">
-        <h2 className="text-2xl font-semibold border-b-2 w-fit text-[#03e9f4]">
+        <h2 className="text-2xl font-semibold border-b-2 w-fit text-[#41c0c7]">
           Introduction:
         </h2>
         <p className=" text-slate-400">

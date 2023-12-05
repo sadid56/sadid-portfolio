@@ -45,23 +45,23 @@ const AboutModal = () => {
     <div className="space-y-5 mt-10">
         <h3 className="text-xl font-bold text-center border-b-2 w-fit mx-auto text-[#03e9f4]">My Personal Information and Download My CV:</h3>
             <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-semibold">Name</span>: Sadid Hasan
+              <span className="text-[#03e9f4] font-bold">Name</span>: Sadid Hasan
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-semibold">Age</span>: 20
+              <span className="text-[#03e9f4] font-bold">Age</span>: 20
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-semibold">Education</span>: HSC (Science)
+              <span className="text-[#03e9f4] font-bold">Education</span>: HSC (Science)
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-semibold">Language</span>: Bangla, Hindi,
+              <span className="text-[#03e9f4] font-bold">Language</span>: Bangla, Hindi,
               English
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-semibold">Role</span>: React Developer
+              <span className="text-[#03e9f4] font-bold">Role</span>: React Developer
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-semibold">Habbit</span>: Gaming, Music
+              <span className="text-[#03e9f4] font-bold">Habbit</span>: Gaming, Music
             </h3>
             <button className="relative inline-flex bg-transparent items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-slate-400  transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 border border-slate-400 group">
               <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
