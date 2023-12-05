@@ -16,7 +16,7 @@
 }
 
 .text-color-change {
-    background: linear-gradient(90deg, #f13b81,  #ff00f3, #ff00c3);
+    background: linear-gradient(90deg, #03e9f4, #0390f4 , #0bb5be,#03e9f4, #0390f4 , #0bb5be);
     background-size: 400%;
     -webkit-background-clip: text;
     color: transparent;
@@ -37,7 +37,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, #f13b81);
+    background: linear-gradient(transparent, #03e9f4);
     border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {

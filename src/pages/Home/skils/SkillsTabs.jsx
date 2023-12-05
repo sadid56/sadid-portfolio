@@ -33,8 +33,8 @@ const SkillsTabs = () => {
           {tabsArray.map((tabArray) => (
             <Tab
               onClick={() => setCurrentTab(tabArray)}
-              className={`outline-none cursor-pointer font-medium ${
-                currentTab === tabArray ? "border-b" : undefined
+              className={`outline-none cursor-pointer font-medium bg-slate-800 px-4 py-2 rounded-md ${
+                currentTab === tabArray ? "border-b-2 border-[#03e9f4]" : undefined
               }`}
               key={tabArray}>
               {tabArray}

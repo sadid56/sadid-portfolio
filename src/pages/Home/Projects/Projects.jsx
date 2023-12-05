@@ -36,14 +36,16 @@ const Projects = () => {
                 </h1>
                 <div className="relative flex items-center gap-2">
                   <button
-                    style={{boxShadow: '0px 0px 10px 2px #f13b81'}} className="btn btn-circle btn-sm border bg-transparent border-[#f13b81] hover:bg-[#f13b81] hover:text-white text-[#f13b81] hover:border-white text-xl"
+                    style={{ boxShadow: "0px 0px 8px 0px #03e9f4" }}
+                    className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white text-xl"
                     onClick={() => setIsTechnology(!isTechnology)}>
                     {isTechnology ? <IoMdClose /> : <GrTechnology />}
                   </button>
                   {isTechnology && (
                     <div className="absolute bg-slate-900 p-5 rounded-md right-24 top-8 space-y-3 w-[180px]">
                       <p>
-                        Technologies: 👇<br />
+                        Technologies: 👇
+                        <br />
                         <small>
                           {project?.technology.map((tech, index) => (
                             <span key={tech}>
@@ -56,7 +58,8 @@ const Projects = () => {
                     </div>
                   )}
                   <button
-                    style={{boxShadow: '0px 0px 10px 2px #f13b81'}} className="btn btn-circle btn-sm border bg-transparent border-[#f13b81] hover:bg-[#f13b81] hover:text-white text-[#f13b81] hover:border-white text-xl"
+                    style={{ boxShadow: "0px 0px 8px 0px #03e9f4" }}
+                    className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white text-xl"
                     onClick={() => setIsClose(!isClose)}>
                     {isClose ? <IoMdClose /> : <FaGithub />}
                   </button>
@@ -85,7 +88,8 @@ const Projects = () => {
                     </ul>
                   )}
                   <a
-                    style={{boxShadow: '0px 0px 10px 2px #f13b81'}} className="btn btn-circle btn-sm border bg-transparent border-[#f13b81] hover:bg-[#f13b81] hover:text-white text-[#f13b81] hover:border-white text-xl"
+                    style={{ boxShadow: "0px 0px 8px 0px #03e9f4" }}
+                    className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white text-xl"
                     href={project?.project_source[2]?.live_link}
                     target="_blank"
                     rel="noreferrer">
@@ -94,7 +98,6 @@ const Projects = () => {
                 </div>
               </div>
               <p>{project?.description}</p>
-              
             </div>
           </div>
         ))}

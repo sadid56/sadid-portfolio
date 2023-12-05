@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
+import logo from '../../../assets/images/my-logo-removebg-preview.png'
 
 //style={{backdropFilter:'blur(50px)'}}
 const Navber = () => {
@@ -31,7 +32,10 @@ const Navber = () => {
       className={` w-full fixed top-0 z-50  
       }`}>
       <div className="flex px-5 justify-between items-center   max-w-6xl mx-auto  py-6 ">
-        <h1 className="text-3xl  text-white italic">Sadid</h1>
+        {/* <h1 className="text-3xl  text-white italic">Sadid</h1> */}
+        <div className="w-[120px]">
+          <img src={logo} alt="" />
+        </div>
         <ul
           className={`text-white flex uppercase text-sm  transition-all delay-1000 ${
             isToggle
@@ -43,7 +47,7 @@ const Navber = () => {
               to="#"
               className="group transition duration-300">
               Home
-              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#f13b81]"></span>
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </NavLink>
           </li>
           <li>
@@ -51,7 +55,7 @@ const Navber = () => {
               to="#"
               className="group transition duration-300">
               About
-              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#f13b81]"></span>
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </NavLink>
           </li>
           <li>
@@ -59,7 +63,7 @@ const Navber = () => {
               to="#"
               className="group transition duration-300">
               Skills
-              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#f13b81]"></span>
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </NavLink>
           </li>
           <li>
@@ -67,7 +71,7 @@ const Navber = () => {
               to="#"
               className="group transition duration-300">
               Projects
-              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#f13b81]"></span>
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </NavLink>
           </li>
           <li>
@@ -75,7 +79,7 @@ const Navber = () => {
               to="#"
               className="group transition duration-300">
               Contact
-              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#f13b81]"></span>
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </NavLink>
           </li>
         </ul>
