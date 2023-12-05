@@ -10,7 +10,7 @@ import './banner.css'
 const Banner = () => {
     
   return ( 
-    <div className="w-full bg-grad py-5 px-5 pt-28 md:pt-0">
+    <div className="w-full bg-grad py-5 px-5 pt-24 md:pt-0">
       <div className="flex flex-col-reverse md:flex-row h-screen pt-10 items-center gap-10 max-w-6xl mx-auto">
         <div className="text-white flex-1 md:w-1/2 space-y-3">
           <div className=" font-semibold uppercase flex items-center gap-3">
@@ -20,7 +20,7 @@ const Banner = () => {
             <h2>There</h2>
             </div>
           <h1 className="text-4xl font-bold">
-            I'am <span className="text-[#e00549]">Sadid,</span>
+            I'am <span className="text-[#f13b81]">Sadid</span>,
           </h1>
           <h1 className=" text-3xl md:text-5xl font-bold text-white text-color-change">
             

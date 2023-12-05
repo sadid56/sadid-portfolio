@@ -79,7 +79,7 @@ const Contact = () => {
           <div className="flex  flex-col md:flex-row items-center  gap-10">
             <div className="flex-1 space-y-6">
               <input
-                className="bg-transparent border-2 border-slate-500 focus:border-[#e00549] outline-none px-5  py-2 rounded w-full "
+                className="bg-transparent border-2 border-slate-500 focus:border-[#f13b81] outline-none px-5 w-[350px] md:w-full  py-2 rounded "
                 type="text"
                 placeholder="Your Name"
                 {...register("name")}
@@ -87,7 +87,7 @@ const Contact = () => {
               />
               <br />
               <input
-                className="bg-transparent border-2 border-slate-500 focus:border-[#e00549] outline-none px-5 py-2 rounded w-full"
+                className="bg-transparent border-2 border-slate-500 focus:border-[#f13b81] outline-none px-5 py-2 rounded w-[350px] md:w-full"
                 type="email"
                 placeholder="Your Email"
                 {...register("email")}
@@ -95,7 +95,7 @@ const Contact = () => {
               />
               <br />
               <input
-                className="bg-transparent border-2 border-slate-500 focus:border[#e00549] outline-none px-5 py-2 rounded w-full"
+                className="bg-transparent border-2 border-slate-500 focus:border-[#f13b81] outline-none px-5 py-2 rounded w-[350px] md:w-full"
                 type="text"
                 placeholder="Your Phone Number"
                 {...register("number")}
@@ -104,7 +104,7 @@ const Contact = () => {
             </div>
             <div className="flex-1">
               <textarea
-                className="bg-transparent border-2 border-slate-500 focus:border-[#e00549] outline-none px-5 py-2 rounded  w-full"
+                className="bg-transparent border-2 border-slate-500 focus:border-[#f13b81] outline-none px-5 py-2 rounded w-[350px] md:w-full"
                 name="message"
                 cols=""
                 {...register("message")}
@@ -117,7 +117,7 @@ const Contact = () => {
             <button type="submit" className="relative inline-flex bg-transparent items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-slate-400  transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 border border-slate-400 group">
               <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
                 <svg
-                  className="w-5 h-5 text-[#e00549]"
+                  className="w-5 h-5 text-[#f13b81]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -143,7 +143,7 @@ const Contact = () => {
                     d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
               </span>
-              <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-[#e00549]">
+              <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-[#f13b81]">
                 SUBMIT FORM
               </span>
             </button>

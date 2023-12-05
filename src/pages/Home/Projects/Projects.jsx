@@ -61,7 +61,7 @@ const Projects = () => {
                     {isClose ? <IoMdClose /> : <FaGithub />}
                   </button>
                   {isClose && (
-                    <ul className="absolute bg-slate-800 p-5 rounded-md right-10 w-[150px] top-8 space-y-3">
+                    <ul className="absolute bg-slate-800 p-5 rounded-md right-10 w-[180px] top-8 space-y-3">
                       <li>
                         <a
                           className="btn btn-sm"
