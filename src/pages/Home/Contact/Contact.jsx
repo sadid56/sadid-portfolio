@@ -41,10 +41,10 @@ const Contact = () => {
     }
   };
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-6xl mx-auto">
       <SectionTitle color={"Contact"} text={"Me"} />
       {/* address */}
-      <div  className="grid md:grid-cols-3 gap-10 mx-3 bg-slate-900 p-5 rounded-md shadow-md bg-opacity-60">
+      <div  className="grid md:grid-cols-3 gap-10 mx-3 bg-slate-900 p-10 rounded-md shadow-md bg-opacity-60">
         <div className="text-center space-y-1">
           <div className="w-14 mx-auto">
             <img src={phonePng} alt="" />

@@ -12,7 +12,16 @@ import {
 import { Link } from "react-router-dom";
 import helloAnimation from "../../../assets/lottie-animation/hello.json";
 import "./banner.css";
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const Banner = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1500, 
+      // offset: 200,
+    });
+  }, []);
   return (
     <div className="w-full bg-grad py-5 px-5 pt-24 md:pt-0">
       <div className="flex flex-col-reverse md:flex-row h-screen pt-10 items-center gap-10 max-w-6xl mx-auto">
@@ -84,7 +93,7 @@ const Banner = () => {
             </button>
           </div>
         </div>
-        <div className=" md:w-[450px]">
+        <div  className=" md:w-[450px]">
           <Lottie animationData={codingAnimatoin} loop={true} />
         </div>
       </div>

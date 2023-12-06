@@ -1,0 +1,11 @@
+.project-card{
+    width: 100%;
+    background: linear-gradient(to bottom left, #05163b,#092152,#010610,#010610, #092152, #010610);
+    border: 2px solid #132444;
+  }
+
+.project-card:hover{
+    box-shadow: 0px 0px 15px 0px #092152;
+    transition: all ease-in 0.10s;
+}
+

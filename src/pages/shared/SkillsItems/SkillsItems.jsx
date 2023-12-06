@@ -1,14 +1,18 @@
 /* eslint-disable react/prop-types */
-
-const SkillsItems = ({ skills}) => {
+import './items.css'
+const SkillsItems = ({ skills }) => {
   return (
-    <div className="mt-10 grid grid-cols-2 mx-3  md:grid-cols-4 lg:grid-cols-6 gap-7 mb-20">
+    <div className="mt-10 grid grid-cols-2 mx-3  md:grid-cols-4 lg:grid-cols-6 gap-5 ">
       {skills?.map((skill) => (
-        <div key={skill?.id} className="bg-[#1e293b] p-4 cursor-pointer rounded-md">
-            <div className="w-10  mx-auto">
-                <img src={skill?.logo} className="w-full object-cover" alt="" />
-            </div>
-          <h2 className="text-xl font-semibold text-center mt-2">{skill?.name}</h2>
+        <div
+          key={skill?.id}
+          className="skill-card p-4 cursor-pointer rounded-md transform transition duration-500 hover:scale-125 hover:text-slate-900 ">
+          <div className="w-10 skill-icon h-10  rounded-full bg-white  mx-auto">
+            <img src={skill?.logo} className="w-full " alt="" />
+          </div>
+          <h2 className="text-xl text-gray-300 font-semibold text-center mt-2">
+            {skill?.name}
+          </h2>
         </div>
       ))}
     </div>

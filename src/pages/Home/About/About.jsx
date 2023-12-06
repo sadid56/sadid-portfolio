@@ -1,14 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
+// import Aos from "aos";
+// import 'aos/dist/aos.css';
+// import { useEffect } from "react";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import aboutImg from "../../../assets/images/me-about.jpg";
 import AboutModal from "./AboutModal";
+import Experience from "./Experience";
 
 const About = () => {
+  // useEffect(() => {
+  //   Aos.init({
+  //     duration: 500, 
+  //     offset: 200,
+  //   });
+  // }, []);
   return (
     <section id="about" className="max-w-6xl mx-auto relative ">
       <SectionTitle color={"About"} text={"Me"} />
         <div className="flex md:px-20 py-10 gap-5 flex-col md:flex-row items-center mt-10 bg-slate-900 rounded-md bg-opacity-60 mx-3">
-          <div className="flex-1 relative">
+          <div className="flex-1 relative ">
             <img
               src={aboutImg}
               className="md:w-[300px] border-[#32a7ae] border-r-[2px] p-2 border-b-[2px]"
@@ -31,6 +41,9 @@ const About = () => {
       <AboutModal/>
       </div>
         </div>
+
+        <Experience/>
+
     </section>
   );
 };

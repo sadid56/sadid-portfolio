@@ -8,6 +8,7 @@ import ParticlesAnimation from "../ParticlessJs/Particless";
 import Projects from "../Projects/Projects";
 import Skils from "../skils/Skils";
 import earthAnimation from '../../../assets/lottie-animation/earth.json'
+import Services from "../Services/Services";
 
 const Home = () => {
     return (
@@ -21,6 +22,7 @@ const Home = () => {
             <About/>
             <Skils/>
             <Projects/>
+            <Services/>
             <Contact/>
             <Footer/>
         </div>

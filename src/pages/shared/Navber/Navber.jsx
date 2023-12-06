@@ -78,6 +78,14 @@ const Navber = () => {
           <NavLink
               to="#"
               className="group transition duration-300">
+              services
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
+            </NavLink>
+          </li>
+          <li>
+          <NavLink
+              to="#"
+              className="group transition duration-300">
               Contact
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </NavLink>

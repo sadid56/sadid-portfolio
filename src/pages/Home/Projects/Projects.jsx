@@ -6,10 +6,11 @@ import { IoMdClose } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { GrTechnology } from "react-icons/gr";
+import './project.css'
 
 const Projects = () => {
-  const [isClose, setIsClose] = useState(false);
-  const [isTechnology, setIsTechnology] = useState(false);
+  const [selectedTechnology, setSelectedTechnology] = useState(null);
+  const [selectedGithub, setSelectedGithub] = useState(null);
   const { data: projects = [] } = useQuery({
     queryKey: ["projects"],
     queryFn: async () => {
@@ -18,30 +19,36 @@ const Projects = () => {
     },
   });
 
+  const handleTechnologyClick = (index) => {
+    setSelectedTechnology(selectedTechnology === index ? null : index);
+  };
+
+  const handleGithubClick = (index) => {
+    setSelectedGithub(selectedGithub === index ? null : index);
+  };
+
   return (
     <section className="max-w-6xl mx-auto">
       <SectionTitle color={"Projects"} />
       <div className="grid md:grid-cols-2 mx-3 lg:grid-cols-3 gap-5">
-        {projects.map((project) => (
-          <div
-            key={project?.id}
-            className="bg-slate-900 p-3 rounded-md bg-opacity-60">
+        {projects.map((project, index) => (
+          <div key={project?.id} className="project-card p-3 rounded-md">
             <div className=" h-48 overflow-y-auto ">
               <img src={project?.project_thumnail} className="w-full" alt="" />
             </div>
             <div className="mt-2">
               <div className="flex items-center justify-between my-4">
-                <h1 className="text-xl font-medium uppercase">
+                <h1 className="text-xl text-gray-300 font-medium uppercase">
                   {project?.project_name}
                 </h1>
                 <div className="relative flex items-center gap-2">
                   <button
                     style={{ boxShadow: "0px 0px 8px 0px #03e9f4" }}
                     className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white text-xl"
-                    onClick={() => setIsTechnology(!isTechnology)}>
-                    {isTechnology ? <IoMdClose /> : <GrTechnology />}
+                    onClick={() => handleTechnologyClick(index)}>
+                    {selectedTechnology === index ? <IoMdClose /> : <GrTechnology />}
                   </button>
-                  {isTechnology && (
+                  {selectedTechnology === index && (
                     <div className="absolute bg-slate-900 p-5 rounded-md right-24 top-8 space-y-3 w-[180px]">
                       <p>
                         Technologies: 👇
@@ -60,10 +67,10 @@ const Projects = () => {
                   <button
                     style={{ boxShadow: "0px 0px 8px 0px #03e9f4" }}
                     className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white text-xl"
-                    onClick={() => setIsClose(!isClose)}>
-                    {isClose ? <IoMdClose /> : <FaGithub />}
+                    onClick={() => handleGithubClick(index)}>
+                    {selectedGithub === index ? <IoMdClose /> : <FaGithub />}
                   </button>
-                  {isClose && (
+                  {selectedGithub === index && (
                     <ul className="absolute bg-slate-800 p-5 rounded-md right-10 w-[180px] top-8 space-y-3">
                       <li>
                         <a
@@ -97,7 +104,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-              <p>{project?.description}</p>
+              <p className="text-slate-400">{project?.description}</p>
             </div>
           </div>
         ))}
@@ -107,3 +114,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
