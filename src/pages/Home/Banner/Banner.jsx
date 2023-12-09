@@ -69,6 +69,13 @@ const Banner = () => {
             <div className="border border-[#03e9f4] w-14"></div>
           </div>
           <div className="flex items-center gap-5">
+          <Link
+             to="https://github.com/sadid56"
+             target="_blank"
+              style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
+              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white">
+              <FaGithub />
+            </Link>
             <Link
               to="https://www.facebook.com/sadidhasan.hasan.5"
               target="_blank"
@@ -76,21 +83,21 @@ const Banner = () => {
               className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white">
               <FaFacebookF />
             </Link>
-            <button
+            <Link
+            to="https://www.linkedin.com/in/sadid-hasan-5b35a62a0/"
+            target="_blank"
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
               className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white">
               <FaLinkedinIn />
-            </button>
-            <button
+            </Link>
+            <Link
+            to="https://www.instagram.com/sadidhasan56/"
+            target="_blank"
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
               className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white">
               <FaInstagram />
-            </button>
-            <button
-              style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white">
-              <FaGithub />
-            </button>
+            </Link>
+            
           </div>
         </div>
         <div  className=" md:w-[450px]">

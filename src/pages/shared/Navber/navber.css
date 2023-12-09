@@ -1,0 +1,26 @@
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100%; /* Start from the left side */
+    width: 0;
+    height: 2px;
+    background-color: #03e9f4;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Add a transition effect */
+}
+
+/* Active state */
+.active::before {
+    width: 100%; /* Expand to the right */
+    left: 0;
+}
+
+
+.active:hover{
+    border-top: 2px solid #03e9f4;
+    transition: border-top 0.3s ease;
+}

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
-import logo from '../../../assets/images/my-logo-removebg-preview.png'
+import logo from "../../../assets/images/my-logo-removebg-preview.png";
+import { Link as ScrollLink } from "react-scroll";
+import './navber.css'
 
 //style={{backdropFilter:'blur(50px)'}}
 const Navber = () => {
@@ -22,8 +23,9 @@ const Navber = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
   return (
-    <nav
+    <nav id="nav"
       style={
         sroll
           ? { backdropFilter: "blur(50px)" }
@@ -37,58 +39,85 @@ const Navber = () => {
           <img src={logo} alt="" />
         </div>
         <ul
-          className={`text-white flex uppercase text-sm  transition-all delay-1000 ${
+          className={`text-white flex uppercase text-sm  cursor-pointer ${
             isToggle
               ? "flex-col absolute md:block top-20 right-0 bg-slate-900  md:bg-transparent p-16 rounded-l-sm shadow-2xl"
               : "hidden md:flex"
           } items-center gap-7`}>
           <li>
-            <NavLink
-              to="#"
+            <ScrollLink
+              to="/"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+             
               className="group transition duration-300">
               Home
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
-            </NavLink>
+            </ScrollLink>
           </li>
           <li>
-          <NavLink
-              to="#"
+            <ScrollLink
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+             
               className="group transition duration-300">
               About
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
-            </NavLink>
+            </ScrollLink>
           </li>
           <li>
-          <NavLink
-              to="#"
+            <ScrollLink
+              to="skills"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
               className="group transition duration-300">
               Skills
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
-            </NavLink>
+            </ScrollLink>
           </li>
           <li>
-          <NavLink
-              to="#"
+            <ScrollLink
+              to="projects"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
               className="group transition duration-300">
               Projects
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
-            </NavLink>
+            </ScrollLink>
           </li>
           <li>
-          <NavLink
-              to="#"
+            <ScrollLink
+              to="services"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
               className="group transition duration-300">
               services
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
-            </NavLink>
+            </ScrollLink>
           </li>
           <li>
-          <NavLink
-              to="#"
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
               className="group transition duration-300">
               Contact
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
-            </NavLink>
+            </ScrollLink>
           </li>
         </ul>
         <button
