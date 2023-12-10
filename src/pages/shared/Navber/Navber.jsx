@@ -39,21 +39,21 @@ const Navber = () => {
           <img src={logo} alt="" />
         </div>
         <ul
-          className={`text-white flex uppercase text-sm  cursor-pointer ${
+          className={`text-white flex uppercase  text-sm  cursor-pointer ${
             isToggle
               ? "flex-col absolute md:block top-20 right-0 bg-slate-900  md:bg-transparent p-16 rounded-l-sm shadow-2xl"
               : "hidden md:flex"
           } items-center gap-7`}>
           <li>
             <ScrollLink
-              to="/"
+              to="home"
               activeClass="active"
               spy={true}
               smooth={true}
               duration={500}
               offset={-50}
              
-              className="group transition duration-300">
+              className="group transition duration-300 ">
               Home
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </ScrollLink>
@@ -65,7 +65,7 @@ const Navber = () => {
               smooth={true}
               duration={500}
               offset={-50}
-             
+            
               className="group transition duration-300">
               About
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
@@ -75,6 +75,7 @@ const Navber = () => {
             <ScrollLink
               to="skills"
               spy={true}
+              activeClass="active"
               smooth={true}
               duration={500}
               offset={-50}
@@ -87,6 +88,7 @@ const Navber = () => {
             <ScrollLink
               to="projects"
               spy={true}
+              activeClass="active"
               smooth={true}
               duration={500}
               offset={-50}
@@ -99,6 +101,7 @@ const Navber = () => {
             <ScrollLink
               to="services"
               spy={true}
+              activeClass="active"
               smooth={true}
               duration={500}
               offset={-50}
@@ -111,6 +114,7 @@ const Navber = () => {
             <ScrollLink
               to="contact"
               spy={true}
+              activeClass="active"
               smooth={true}
               duration={500}
               offset={-50}
