@@ -3,7 +3,7 @@ import { FiAlignJustify } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import logo from "../../../assets/images/my-logo-removebg-preview.png";
 import { Link as ScrollLink } from "react-scroll";
-import './navber.css'
+import "./navber.css";
 
 //style={{backdropFilter:'blur(50px)'}}
 const Navber = () => {
@@ -23,9 +23,10 @@ const Navber = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
   return (
-    <nav id="nav"
+    <nav
+      id="nav"
       style={
         sroll
           ? { backdropFilter: "blur(50px)" }
@@ -52,8 +53,9 @@ const Navber = () => {
               smooth={true}
               duration={500}
               offset={-50}
-             
-              className="group transition duration-300 ">
+              className={`group transition duration-300 ${
+                !sroll ? "homeActive" : undefined
+              }`}>
               Home
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </ScrollLink>
@@ -65,7 +67,6 @@ const Navber = () => {
               smooth={true}
               duration={500}
               offset={-50}
-            
               className="group transition duration-300">
               About
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>

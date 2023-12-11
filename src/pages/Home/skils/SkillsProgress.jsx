@@ -28,6 +28,60 @@ const SkillsProgress = () => {
             </span>
           </div>
         </div>
+        {/* <div className="card">
+          <div className="box">
+            <div className="main-box">
+              <div className="parcent">
+                <svg>
+                  <circle cx={70} cy={70} r={70}/>
+                  <circle cx={70} cy={70} r={70}/>
+                </svg>
+                <div className="number">
+                  <h2>96<span>%</span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="text">
+            <h2>React Development</h2>
+          </div>
+        </div>
+        <div className="card">
+          <div className="box">
+            <div className="main-box">
+              <div className="parcent">
+                <svg>
+                  <circle cx={"70"} cy={"70"} r={"70"}/>
+                  <circle cx={"70"} cy={"70"} r={"70"}/>
+                </svg>
+                <div className="number">
+                  <h2>80<span>%</span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="text">
+            <h2>Web Design</h2>
+          </div>
+        </div>
+        <div className="card">
+          <div className="box">
+            <div className="main-box">
+              <div className="parcent">
+                <svg>
+                  <circle cx={70} cy={70} r={70}/>
+                  <circle cx={70} cy={70} r={70}/>
+                </svg>
+                <div className="number">
+                  <h2>85<span>%</span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="text">
+            <h2>MERN Stack Development</h2>
+          </div>
+        </div> */}
       </div>
     );
 };

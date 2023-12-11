@@ -7,7 +7,7 @@ import SkillsTabs from "./SkillsTabs";
 
 const Skils = () => {
   return (
-    <section id="skils" className="max-w-6xl mx-auto">
+    <section className="max-w-6xl mx-auto">
       <SectionTitle color={"Skills"} text={"Tooltip"} />
       <SkillsProgress />
       <SectionTitle color={'My Skills'}/>

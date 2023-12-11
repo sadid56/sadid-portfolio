@@ -8,7 +8,7 @@
     {
         "id": 2,
          "name": "React",
-         "logo": "https://i.ibb.co/1MFZZrc/React-icon-svg-removebg-preview.png",
+         "logo": "https://i.ibb.co/rHV3T7s/React-icon-svg-1.png",
          "category": "Front-End"
     },
     {
@@ -68,13 +68,13 @@
     {
         "id": 12,
          "name": "GitHub",
-         "logo": "https://i.ibb.co/jV9QYsp/github.png",
+         "logo": "https://i.ibb.co/VpgW0hn/unnamed.png",
          "category": "Others"
     },
     {
         "id": 13,
          "name": "Vercel",
-         "logo": "https://i.ibb.co/Stv9KPt/vercel-removebg-preview.png",
+         "logo": "https://i.ibb.co/7GzV7cr/vercel.png",
          "category": "Others"
     },
     {

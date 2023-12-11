@@ -7,8 +7,8 @@ const SkillsItems = ({ skills }) => {
         <div
           key={skill?.id}
           className="skill-card p-4 cursor-pointer rounded-md transform transition duration-500 hover:scale-125 hover:text-slate-900 ">
-          <div className="w-10 skill-icon h-10  rounded-full bg-white  mx-auto">
-            <img src={skill?.logo} className="w-full " alt="" />
+          <div className="w-10 skill-icon h-10   mx-auto">
+            <img src={skill?.logo} className="w-10 h-10 object-cover rounded-full border-2 border-[#11c6cf]" alt="" />
           </div>
           <h2 className="text-xl text-gray-300 font-semibold text-center mt-2">
             {skill?.name}
