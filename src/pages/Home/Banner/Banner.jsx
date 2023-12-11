@@ -15,6 +15,7 @@ import "./banner.css";
 import Aos from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import resume from '../../../assets/images/resume.png'
 const Banner = () => {
   useEffect(() => {
     Aos.init({
@@ -65,7 +66,7 @@ const Banner = () => {
             />
           </h1>
          <div className="">
-         <a href="https://drive.google.com/file/d/1MjqiclHr8e3ZJtooQfqp2_PNu9VQ3rIw/view?usp=drive_link" download target="_blank" className="relative inline-flex bg-transparent items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-slate-400  transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 border border-slate-400 group">
+         <a href={resume} download target="_blank" className="relative inline-flex bg-transparent items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-slate-400  transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 border border-slate-400 group">
               <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
                 <svg
                   className="w-5 h-5 text-[#03e9f4]"
@@ -98,13 +99,7 @@ const Banner = () => {
                 Download Resume
               </span>
             </a>
-            {/* <a href="#" className="button">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Download Resume
-            </a> */}
+           
          </div>
           <div className="flex items-center gap-2">
             <h3 style={{letterSpacing:'3px'}} className=" uppercase text-sm text-slate-400">Find with me</h3>

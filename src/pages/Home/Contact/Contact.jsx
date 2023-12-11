@@ -144,7 +144,7 @@ const Contact = () => {
                 </svg>
               </span>
               <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-[#03e9f4]">
-                SUBMIT FORM
+                SEND MESSAGE
               </span>
             </button>
           </div>
