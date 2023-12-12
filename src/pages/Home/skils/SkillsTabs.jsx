@@ -16,7 +16,7 @@ const SkillsTabs = () => {
     },
   });
 
-  const tabsArray = ["Front-End", "Backend", "Others"];
+  const tabsArray = ["Front-End", "Backend", "Professionals", "Others"];
 
   const FrontEndData = skills.filter(
     (frontEnd) => frontEnd?.category === "Front-End"
@@ -24,12 +24,15 @@ const SkillsTabs = () => {
   const BackendData = skills.filter(
     (Backend) => Backend?.category === "Backend"
   );
+  const ProfessionalData = skills.filter(
+    (Professional) => Professional?.category === "Professionals"
+  );
   const OthersData = skills.filter((other) => other?.category === "Others");
 
   return (
     <div>
       <Tabs>
-        <TabList className={"flex justify-center gap-5 outline-none"}>
+        <TabList className={"flex flex-wrap justify-center gap-5 outline-none"}>
           {tabsArray.map((tabArray) => (
             <Tab
               onClick={() => setCurrentTab(tabArray)}
@@ -50,6 +53,9 @@ const SkillsTabs = () => {
           <SkillsItems skills={BackendData} />
         </TabPanel>
 
+        <TabPanel>
+          <SkillsItems skills={ProfessionalData} />
+        </TabPanel>
         <TabPanel>
           <SkillsItems skills={OthersData} />
         </TabPanel>

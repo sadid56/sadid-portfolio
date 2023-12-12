@@ -46,28 +46,28 @@ const Contact = () => {
       {/* address */}
       <div  className="grid md:grid-cols-3 gap-10 mx-3 bg-slate-900 p-10 rounded-md shadow-md bg-opacity-60">
         <div className="text-center space-y-1">
-          <div className="w-14 mx-auto">
+          <div className="w-10 mx-auto">
             <img src={phonePng} alt="" />
           </div>
-          <h2 className="text-xl font-medium">Call Me</h2>
+          <h2 className="text-xl font-medium text-[#03e9f4]">Call Me</h2>
           <p>
             <small>01739 859756</small>
           </p>
         </div>
         <div className="text-center space-y-1">
-          <div className="w-14 mx-auto">
+          <div className="w-10 mx-auto">
             <img src={homePng} alt="" />
           </div>
-          <h2 className="text-xl font-medium">Home</h2>
+          <h2 className="text-xl font-medium text-[#03e9f4]">Home</h2>
           <p>
-            <small>Bogura, shajahanpur</small>
+            <small>Bogura, Shajahanpur</small>
           </p>
         </div>
         <div className="text-center">
-          <div className="w-14 mx-auto space-y-1">
+          <div className="w-10 mx-auto space-y-1">
             <img src={EmailPng} alt="" />
           </div>
-          <h2 className="text-xl font-medium">Email</h2>
+          <h2 className="text-xl font-medium text-[#03e9f4]">Email</h2>
           <p>
             <small>sadidhasan56@gmail.com</small>
           </p>
@@ -75,7 +75,7 @@ const Contact = () => {
       </div>
       <div className="mt-10">
         <form  onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="text-xl text-center md:text-start font-medium mb-5">Have a question ?</h2>
+          <h2 className="text-xl text-center md:text-start font-medium mb-5">Have a <span className="text-[#03e9f4]">Question</span>?</h2>
           <div className="flex  flex-col md:flex-row items-center  gap-10">
             <div className="flex-1 space-y-6">
               <input

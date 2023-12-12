@@ -10,6 +10,7 @@
     #010610
   );
   border: 2px solid #18315f;
+  border-bottom: transparent
 }
 
 .project-card:hover {
@@ -33,10 +34,20 @@
   width: 100%;
   height: 2px;
   background: linear-gradient(to right, #0c002b, #03e9f4);
-  transition: background 0.3s ease; 
 }
 
-.border-gradient:hover::before {
-  background: linear-gradient(to right, black, #03e9f4);
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #18315f, #18315f);
+  transition: background 0.3s ease; /* Add transition for a smooth color change */
 }
 
+.project-card:hover::before {
+  background: linear-gradient(to left, #18315f, #03e9f4);
+}

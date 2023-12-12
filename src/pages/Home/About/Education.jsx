@@ -1,11 +1,20 @@
-
-const AboutModal = () => {
- 
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { IoMdClose } from "react-icons/io";
+const Education = () => {
+  const { data: educations = [] } = useQuery({
+    queryKey: ["education"],
+    queryFn: async () => {
+      const res = await axios.get("/education.json");
+      return res.data;
+    },
+  });
+  // console.log(educations);
   return (
     <div>
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
       <button
-        onClick={() => document.getElementById("my_modal_3").showModal()}
+        onClick={() => document.getElementById("education").showModal()}
         className="relative text-sm md:text-md uppercase inline-flex bg-transparent items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-slate-400  transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 border border-slate-400 group">
         <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
           <svg
@@ -36,42 +45,34 @@ const AboutModal = () => {
           </svg>
         </span>
         <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-[#03e9f4]">
-          Basic Info
+          Education Info
         </span>
       </button>
-      <dialog id="my_modal_3" className="modal">
-        <div className="modal-box bg-slate-900">
+      <dialog id="education" className="modal">
+        <div className="modal-box w-11/12 max-w-6xl p-10 bg-slate-900 shadow-2xl">
           <form method="dialog">
             <button
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#03e9f4] hover:text-white text-[#03e9f4] hover:border-white absolute right-2 top-2">
-              X
+              className="btn text-xl btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#03e9f4] hover:text-white text-[#03e9f4] hover:border-white absolute right-2 top-2">
+              <IoMdClose />
             </button>
           </form>
-          <div className="space-y-5 mt-10">
-            <h3 className="text-xl font-bold text-center border-b-2 w-fit mx-auto text-[#03e9f4]">
-              My Basic Information:
-            </h3>
-            <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-bold">Name</span>: Sadid
-              Hasan
-            </h3>
-            <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-bold">Age</span>: 20
-            </h3>
-            <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-bold">Language</span>:
-              Bangla, Hindi, English
-            </h3>
-            <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-bold">Role</span>: React
-              Developer
-            </h3>
-            <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-bold">Habbit</span>: Gaming,
-              Music, Movies
-            </h3>
-           
+          <div className="grid md:grid-cols-2 gap-5">
+            {educations.map((education) => (
+              <div key={education.id} className="border-2 border-slate-600 rounded-md p-6 space-y-4 h-full">
+                <div className="flex gap-4 md:gap-0 flex-col md:flex-row md:items-center md:justify-between">
+                  <div>
+                    <h2 className="text-2xl font-medium text-[#37ccd4]">{education?.intitude_name}</h2>
+                    <h2 className="text-[18px] font-medium">{education?.education_name}</h2>
+                  </div>
+                  <div>
+                    <h2 className="bg-slate-800 px-2 py-1 w-fit rounded mb-2 font-medium">{education?.result}</h2>
+                    <h2 className="font-medium">{education?.year}</h2>
+                  </div>
+                </div>
+                <p className="text-gray-400">{education.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </dialog>
@@ -79,4 +80,4 @@ const AboutModal = () => {
   );
 };
 
-export default AboutModal;
+export default Education;

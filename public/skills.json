@@ -82,5 +82,49 @@
          "name": "Firebase",
          "logo": "https://i.ibb.co/gtHr19h/firebase-removebg-preview.png",
          "category": "Others"
+    },
+    {
+        "id": 15,
+         "name": "React",
+         "logo": "https://i.ibb.co/rHV3T7s/React-icon-svg-1.png",
+         "category": "Professionals"
+    },
+    {
+        "id": 16,
+         "name": "JavaScript",
+         "logo": "https://i.ibb.co/s3hStV0/Java-Script-logo.png",
+         "category": "Professionals"
+    }, 
+    {
+        "id": 17,
+         "name": "MongoDB",
+         "logo": "https://i.ibb.co/61S3y6y/erkxwhl1gd48xfhe2yld.webp",
+         "category": "Professionals"
+    },
+    {
+        "id": 18,
+         "name": "HTML5",
+         "logo": "https://i.ibb.co/rkYDGps/logo-2582748-960-720.webp",
+         "category": "Professionals"
+    },
+    
+    {
+        "id": 19,
+         "name": "Tailwindcss",
+         "logo": "https://i.ibb.co/hBmwFBs/tailwind-removebg-preview.png",
+         "category": "Professionals"
+    }
+    ,
+    {
+        "id": 20,
+         "name": "GitHub",
+         "logo": "https://i.ibb.co/VpgW0hn/unnamed.png",
+         "category": "Professionals"
+    },
+    {
+        "id": 21,
+         "name": "Firebase",
+         "logo": "https://i.ibb.co/gtHr19h/firebase-removebg-preview.png",
+         "category": "Professionals"
     }
 ]
