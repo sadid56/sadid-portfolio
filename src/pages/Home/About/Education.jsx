@@ -9,10 +9,8 @@ const Education = () => {
       return res.data;
     },
   });
-  // console.log(educations);
   return (
     <div>
-      {/* You can open the modal using document.getElementById('ID').showModal() method */}
       <button
         onClick={() => document.getElementById("education").showModal()}
         className="relative text-sm md:text-md uppercase inline-flex bg-transparent items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-slate-400  transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 border border-slate-400 group">
@@ -49,7 +47,7 @@ const Education = () => {
         </span>
       </button>
       <dialog id="education" className="modal">
-        <div className="modal-box w-11/12 max-w-6xl p-10 bg-slate-900 shadow-2xl">
+        <div className="modal-box w-11/12 max-w-6xl pt-14 bg-[#09152d] shadow-2xl">
           <form method="dialog">
             <button
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
@@ -59,14 +57,14 @@ const Education = () => {
           </form>
           <div className="grid md:grid-cols-2 gap-5">
             {educations.map((education) => (
-              <div key={education.id} className="border-2 border-slate-600 rounded-md p-6 space-y-4 h-full">
+              <div  style={{ boxShadow: "0px 0px 5px  #03e9f4" }} key={education.id} className=" rounded-md p-6 space-y-4 h-full ">
                 <div className="flex gap-4 md:gap-0 flex-col md:flex-row md:items-center md:justify-between">
                   <div>
                     <h2 className="text-2xl font-medium text-[#37ccd4]">{education?.intitude_name}</h2>
                     <h2 className="text-[18px] font-medium">{education?.education_name}</h2>
                   </div>
                   <div>
-                    <h2 className="bg-slate-800 px-2 py-1 w-fit rounded mb-2 font-medium">{education?.result}</h2>
+                    <h2 className="bg-[#103551] px-2 py-1 w-fit rounded mb-2 font-medium">{education?.result}</h2>
                     <h2 className="font-medium">{education?.year}</h2>
                   </div>
                 </div>

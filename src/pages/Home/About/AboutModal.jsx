@@ -1,4 +1,4 @@
-
+import { IoMdClose } from "react-icons/io";
 const AboutModal = () => {
  
   return (
@@ -40,12 +40,12 @@ const AboutModal = () => {
         </span>
       </button>
       <dialog id="my_modal_3" className="modal">
-        <div className="modal-box bg-slate-900">
+        <div className="modal-box bg-[#09152d]">
           <form method="dialog">
             <button
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#03e9f4] hover:text-white text-[#03e9f4] hover:border-white absolute right-2 top-2">
-              X
+              className="btn text-xl btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#03e9f4] hover:text-white text-[#03e9f4] hover:border-white absolute right-2 top-2">
+              <IoMdClose/>
             </button>
           </form>
           <div className="space-y-5 mt-10">
@@ -54,22 +54,28 @@ const AboutModal = () => {
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
               <span className="text-[#03e9f4] font-bold">Name</span>: Sadid
-              Hasan
+              Hasan,
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-bold">Age</span>: 20
+              <span className="text-[#03e9f4] font-bold">Religion</span>: Islam,
+            </h3>
+            <h3 className="text-slate-400 text-xl font-medium">
+              <span className="text-[#03e9f4] font-bold">Country</span>: Bangladesh,
+            </h3>
+            <h3 className="text-slate-400 text-xl font-medium">
+              <span className="text-[#03e9f4] font-bold">Age</span>: 20,
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
               <span className="text-[#03e9f4] font-bold">Language</span>:
-              Bangla, Hindi, English
+              Bangla, Hindi, English,
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
               <span className="text-[#03e9f4] font-bold">Role</span>: React
-              Developer
+              Developer,
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-bold">Habbit</span>: Gaming,
-              Music, Movies
+              <span className="text-[#03e9f4] font-bold">Habbit</span>: Coding, Gaming,
+              Music, Movies.
             </h3>
            
           </div>

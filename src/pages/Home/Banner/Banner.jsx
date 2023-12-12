@@ -89,9 +89,9 @@ const Banner = () => {
          
            
          </div>
-          <div className="flex items-center gap-2">
-            <h3 style={{letterSpacing:'3px'}} className=" uppercase text-sm text-slate-400">Find with me</h3>
-            <div className="border border-[#03e9f4] w-14"></div>
+          <div className="flex items-center gap-2 relative">
+            <h3 style={{letterSpacing:'3px'}} className=" uppercase text-sm text-slate-300  z-10">Find with me</h3>
+            <div className="find-border"></div>
           </div>
           <div className="flex items-center gap-5">
           <Link

@@ -138,3 +138,9 @@
     transform: translateY(-100%);
   }
 }
+
+.find-border{
+  height: 2px;
+  background: linear-gradient(to right, #0c002b, #03e9f4);
+  width: 50px;
+}

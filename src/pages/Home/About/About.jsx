@@ -8,7 +8,6 @@ import aboutImg from "../../../assets/images/me-about.jpg";
 import AboutModal from "./AboutModal";
 import Education from "./Education";
 import Experience from "./Experience";
-
 const About = () => {
   // useEffect(() => {
   //   Aos.init({
