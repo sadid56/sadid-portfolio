@@ -10,25 +10,25 @@ const Experience = () => {
             <div className='text-center space-y-2 transform transition duration-500 hover:scale-110'>
                 <img className='w-10 mx-auto' src={experience} alt="" />
                 <h2 className='text-3xl font-bold text-[#03e9f4]'>1</h2>
-                <h4 className='text-xl font-medium'>Year of Experiance</h4>
+                <h4 className='text-xl text-gray-400 font-medium'>Year of Experiance</h4>
             </div>
           
             <div className='text-center space-y-2 transform transition duration-500 hover:scale-110'>
                 <img className='w-10 mx-auto' src={Projects} alt="" />
                 <h2 className='text-3xl font-bold text-[#03e9f4]'>3</h2>
-                <h4 className='text-xl font-medium'>Projects Complete</h4>
+                <h4 className='text-xl text-gray-400 font-medium'>Projects Complete</h4>
             </div>
           
             <div className='text-center space-y-2 transform transition duration-500 hover:scale-110'>
                 <img className='w-10 mx-auto' src={clients} alt="" />
                 <h2 className='text-3xl font-bold text-[#03e9f4]'>0</h2>
-                <h4 className='text-xl font-medium'>Happy Clients</h4>
+                <h4 className='text-xl text-gray-400 font-medium'>Happy Clients</h4>
             </div>
           
             <div className='text-center space-y-2 transform transition duration-500 hover:scale-110'>
                 <img className='w-10 mx-auto' src={certificate} alt="" />
                 <h2 className='text-3xl font-bold text-[#03e9f4]'>0</h2>
-                <h4 className='text-xl font-medium'>Certificats Earned</h4>
+                <h4 className='text-xl text-gray-400 font-medium'>Certificats Earned</h4>
             </div>
           
             

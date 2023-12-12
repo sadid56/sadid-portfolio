@@ -97,32 +97,26 @@
     }, 
     {
         "id": 17,
-         "name": "MongoDB",
-         "logo": "https://i.ibb.co/61S3y6y/erkxwhl1gd48xfhe2yld.webp",
-         "category": "Professionals"
-    },
-    {
-        "id": 18,
          "name": "HTML5",
          "logo": "https://i.ibb.co/rkYDGps/logo-2582748-960-720.webp",
          "category": "Professionals"
     },
     
     {
-        "id": 19,
+        "id": 18,
          "name": "Tailwindcss",
          "logo": "https://i.ibb.co/hBmwFBs/tailwind-removebg-preview.png",
          "category": "Professionals"
     }
     ,
     {
-        "id": 20,
+        "id": 19,
          "name": "GitHub",
          "logo": "https://i.ibb.co/VpgW0hn/unnamed.png",
          "category": "Professionals"
     },
     {
-        "id": 21,
+        "id": 20,
          "name": "Firebase",
          "logo": "https://i.ibb.co/gtHr19h/firebase-removebg-preview.png",
          "category": "Professionals"

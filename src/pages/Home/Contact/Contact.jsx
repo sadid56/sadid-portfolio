@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 
 const Contact = () => {
   const { register, handleSubmit, reset } = useForm();
-  const onSubmit = async(data) => {
+  const onSubmit = async (data) => {
     // console.log(data);
     if (isNaN(data?.number)) {
       return toast.error("Please provide a valid number 😒!");
@@ -20,12 +20,12 @@ const Contact = () => {
       return toast.error("Phone number must be exactly 11 digits long 😒!");
     }
     const templateParams = {
-      name:data?.name,
+      name: data?.name,
       email: data?.email,
-      number:data?.number,
+      number: data?.number,
       message: data?.message,
     };
-    
+
     const res = await emailjs.send(
       "service_ngz2qsb",
       "template_von4hdk",
@@ -33,24 +33,23 @@ const Contact = () => {
       "JlpXCvdYgzXy6-d-i"
     );
     if (res.status === 200) {
-     toast.success("Message Send Success 😍!")
-     reset()
-    } 
-    else{
-      toast.error("Message Send Faild 🥲!")
+      toast.success("Message Send Success 😍!");
+      reset();
+    } else {
+      toast.error("Message Send Faild 🥲!");
     }
   };
   return (
     <div className="max-w-6xl mx-auto">
       <SectionTitle color={"Contact"} text={"Me"} />
       {/* address */}
-      <div  className="grid md:grid-cols-3 gap-10 mx-3 bg-slate-900 p-10 rounded-md shadow-md bg-opacity-60">
+      <div className="grid md:grid-cols-3 gap-10 mx-3 bg-slate-900 p-10 rounded-md shadow-md bg-opacity-60">
         <div className="text-center space-y-1">
           <div className="w-10 mx-auto">
             <img src={phonePng} alt="" />
           </div>
           <h2 className="text-xl font-medium text-[#03e9f4]">Call Me</h2>
-          <p>
+          <p className="text-gray-400 font-medium">
             <small>01739 859756</small>
           </p>
         </div>
@@ -59,7 +58,7 @@ const Contact = () => {
             <img src={homePng} alt="" />
           </div>
           <h2 className="text-xl font-medium text-[#03e9f4]">Home</h2>
-          <p>
+          <p className="text-gray-400 font-medium">
             <small>Bogura, Shajahanpur</small>
           </p>
         </div>
@@ -68,18 +67,20 @@ const Contact = () => {
             <img src={EmailPng} alt="" />
           </div>
           <h2 className="text-xl font-medium text-[#03e9f4]">Email</h2>
-          <p>
+          <p className="text-gray-400 font-medium">
             <small>sadidhasan56@gmail.com</small>
           </p>
         </div>
       </div>
       <div className="mt-10">
-        <form  onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="text-xl text-center md:text-start font-medium mb-5">Have a <span className="text-[#03e9f4]">Question</span>?</h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <h2 className="text-xl text-center md:text-start font-medium mb-5 text-slate-400">
+            Have a <span className="text-[#03e9f4]">Question</span>?
+          </h2>
           <div className="flex  flex-col md:flex-row items-center  gap-10">
             <div className="flex-1 space-y-6">
               <input
-                className="bg-transparent border-2 border-slate-500 focus:border-[#03e9f4] outline-none px-5 w-[350px] md:w-full  py-2 rounded "
+                className="bg-transparent border-2 border-slate-500 focus:border-[#03e9f4] outline-none px-5 w-[350px] md:w-full  py-2 rounded placeholder:text-slate-400 text-slate-400 focus:bg-slate-800"
                 type="text"
                 placeholder="Your Name"
                 {...register("name")}
@@ -87,7 +88,7 @@ const Contact = () => {
               />
               <br />
               <input
-                className="bg-transparent border-2 border-slate-500 focus:border-[#03e9f4] outline-none px-5 py-2 rounded w-[350px] md:w-full"
+                className="bg-transparent border-2 border-slate-500 focus:border-[#03e9f4] outline-none px-5 py-2 rounded w-[350px] md:w-full placeholder:text-slate-400 text-slate-400 focus:bg-slate-800"
                 type="email"
                 placeholder="Your Email"
                 {...register("email")}
@@ -95,7 +96,7 @@ const Contact = () => {
               />
               <br />
               <input
-                className="bg-transparent border-2 border-slate-500 focus:border-[#03e9f4] outline-none px-5 py-2 rounded w-[350px] md:w-full"
+                className="bg-transparent border-2 border-slate-500 focus:border-[#03e9f4] outline-none px-5 py-2 rounded w-[350px] md:w-full placeholder:text-slate-400 text-slate-400 focus:bg-slate-800"
                 type="text"
                 placeholder="Your Phone Number"
                 {...register("number")}
@@ -104,7 +105,7 @@ const Contact = () => {
             </div>
             <div className="flex-1">
               <textarea
-                className="bg-transparent border-2 border-slate-500 focus:border-[#03e9f4] outline-none px-5 py-2 rounded w-[350px] md:w-full"
+                className="bg-transparent border-2 border-slate-500 focus:border-[#03e9f4] outline-none px-5 py-2 rounded w-[350px] md:w-full placeholder:text-slate-400 text-slate-400 focus:bg-slate-800"
                 name="message"
                 cols=""
                 {...register("message")}
@@ -114,7 +115,9 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex justify-center mt-5">
-            <button type="submit" className="relative inline-flex bg-transparent items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-slate-400  transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 border border-slate-400 group">
+            <button
+              type="submit"
+              className="relative inline-flex bg-transparent items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-slate-400  transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 border border-slate-400 group">
               <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
                 <svg
                   className="w-5 h-5 text-[#03e9f4]"

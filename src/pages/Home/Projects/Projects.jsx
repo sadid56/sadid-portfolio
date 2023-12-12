@@ -40,7 +40,7 @@ const Projects = () => {
       <SectionTitle color={"Projects"} />
       <div className="grid grid-cols-1  md:grid-cols-2 gap-5 md:gap-20">
         <div className="order-2 md:order-1 mx-5">
-          <h2 className=" font-semibold mb-2 uppercase">
+          <h2 className=" font-semibold mb-2 uppercase text-slate-300">
             Swipe to Show my <span className="text-[#03e9f4]">projects</span>
           </h2>
           <Swiper
