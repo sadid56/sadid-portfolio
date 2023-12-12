@@ -1,11 +1,42 @@
-.project-card{
-    width: 100%;
-    background: linear-gradient(to bottom left, #05163b,#092152,#010610,#010610, #092152, #010610);
-    border: 2px solid #132444;
-  }
+.project-card {
+  width: 100%;
+  background: linear-gradient(
+    to bottom left,
+    #05163b,
+    #092152,
+    #010610,
+    #010610,
+    #092152,
+    #010610
+  );
+  border: 2px solid #18315f;
+}
 
-.project-card:hover{
-    box-shadow: 0px 0px 15px 0px #092152;
-    transition: all ease-in 0.10s;
+.project-card:hover {
+  box-shadow: 0px 0px 5px 0 #03e9f4;
+  background: linear-gradient(
+    to bottom right,
+    #05163b,
+    #010610,
+    #010610,
+    #010610,
+    #092152,
+    #092152
+  );
+}
+
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #0c002b, #03e9f4);
+  transition: background 0.3s ease; 
+}
+
+.border-gradient:hover::before {
+  background: linear-gradient(to right, black, #03e9f4);
 }
 

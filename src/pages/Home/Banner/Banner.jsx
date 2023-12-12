@@ -66,7 +66,7 @@ const Banner = () => {
               cursorStyle="."
             />
           </h1>
-         <div className="py-8 relative w-full">
+         <div className="py-9 relative w-full">
             <a href={resume} target="_blank" download className="button absolute left-[70px]">
               <span></span>
               <span></span>
@@ -83,7 +83,7 @@ const Banner = () => {
               <span></span>
               <span></span>
               <span></span>
-              Hair me
+              Hire me
             </ScrollLink>
           
          

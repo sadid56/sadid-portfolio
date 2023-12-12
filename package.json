@@ -33,6 +33,7 @@
     "react-tabs": "^6.0.2",
     "react-tilt": "^1.0.2",
     "sort-by": "^1.2.0",
+    "swiper": "^11.0.5",
     "tsparticles": "^2.12.0",
     "tsparticles-slim": "^2.12.0"
   },
