@@ -8,17 +8,17 @@ import { TbWorld } from "react-icons/tb";
 import { GrTechnology } from "react-icons/gr";
 import "./project.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
-import { EffectCards } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import projectAnimation from "../../../assets/lottie-animation/projects.json";
 import Lottie from "lottie-react";
 
 const Projects = () => {
   const [selectedTechnology, setSelectedTechnology] = useState(null);
   const [selectedGithub, setSelectedGithub] = useState(null);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const { data: projects = [] } = useQuery({
     queryKey: ["projects"],
     queryFn: async () => {
@@ -35,23 +35,46 @@ const Projects = () => {
     setSelectedGithub(selectedGithub === index ? null : index);
   };
 
+  const handleSlideChange = (swiper) => {
+    setCurrentProjectIndex(swiper.realIndex);
+  };
   return (
     <section className="max-w-6xl mx-auto">
       <SectionTitle color={"Projects"} />
       <div className="grid grid-cols-1  md:grid-cols-2 gap-5 md:gap-20">
         <div className="order-2 md:order-1 mx-5">
-          <h2 className=" font-semibold mb-2 uppercase text-slate-300">
-            Swipe to Show my <span className="text-[#03e9f4]">projects</span>
+          <h2 className=" font-medium  mb-2 uppercase text-slate-300">
+            Project Number: <span className="text-[#03e9f4] lowercase">{currentProjectIndex + 1} of {projects.length}</span>
           </h2>
+         
           <Swiper
             effect={"cards"}
+            centeredSlides={true}
+            slidesPerView={1}
+            loop={true}
             grabCursor={true}
-            modules={[EffectCards]}
+            modules={[Autoplay, Pagination, Navigation]}
+            // navigation={{
+            //   nextEl: "#swiper-button-next",
+            //   prevEl: "#swiper-button-prev",
+            // }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            pagination={{
+              clickable: true,
+              renderBullet: function (index, className) {
+                return (
+                  '<span class="' +
+                  className +
+                  '" style="background-color: #03e9f4; width: 15px; height: 15px; margin-top: 10px;"></span>'
+                );
+              },
+            }}
+            onSlideChange={handleSlideChange}
             className="mySwiper">
             {projects.map((project, index) => (
               <SwiperSlide
                 key={project?.id}
-                className="project-card p-3 rounded-md">
+                className="project-card p-3 rounded-md ">
                 <div className=" h-48 overflow-y-auto ">
                   <img
                     src={project?.project_thumnail}
@@ -77,7 +100,7 @@ const Projects = () => {
                         )}
                       </button>
                       {selectedTechnology === index && (
-                        <div className="absolute bg-slate-900 p-5 rounded-md right-24 top-8 space-y-3 w-[180px]">
+                        <div className="absolute bg-slate-900 p-5 rounded-md right-28 bottom-0 space-y-3 w-[180px] ">
                           <p>
                             Technologies: 👇
                             <br />
@@ -146,6 +169,8 @@ const Projects = () => {
                 </div>
               </SwiperSlide>
             ))}
+            {/* <div id="swiper-button-prev" className="swiper-button-prev"></div>
+            <div id="swiper-button-next" className="swiper-button-next"></div> */}
           </Swiper>
         </div>
         <div className="md:w-[400px] order-1 md:order-2 md:ml-20">

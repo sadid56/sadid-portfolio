@@ -16,7 +16,7 @@ const SkillsTabs = () => {
     },
   });
 
-  const tabsArray = ["Front-End", "Backend", "Professionals", "Others"];
+  const tabsArray = ["Front-End", "Backend", "Experts", "Tools"];
 
   const FrontEndData = skills.filter(
     (frontEnd) => frontEnd?.category === "Front-End"
@@ -24,10 +24,10 @@ const SkillsTabs = () => {
   const BackendData = skills.filter(
     (Backend) => Backend?.category === "Backend"
   );
-  const ProfessionalData = skills.filter(
-    (Professional) => Professional?.category === "Professionals"
+  const ExpertsData = skills.filter(
+    (Experts) => Experts?.category === "Experts"
   );
-  const OthersData = skills.filter((other) => other?.category === "Others");
+  const OthersData = skills.filter((other) => other?.category === "Tools");
 
   return (
     <div>
@@ -54,7 +54,7 @@ const SkillsTabs = () => {
         </TabPanel>
 
         <TabPanel>
-          <SkillsItems skills={ProfessionalData} />
+          <SkillsItems skills={ExpertsData} />
         </TabPanel>
         <TabPanel>
           <SkillsItems skills={OthersData} />

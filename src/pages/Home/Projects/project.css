@@ -1,5 +1,6 @@
 .project-card {
   width: 100%;
+  height: 400px !important;
   background: linear-gradient(
     to bottom left,
     #05163b,
@@ -51,3 +52,26 @@
 .project-card:hover::before {
   background: linear-gradient(to left, #18315f, #03e9f4);
 }
+
+/* Styles for left and right navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px; 
+}
+
+
+
+
+
+
