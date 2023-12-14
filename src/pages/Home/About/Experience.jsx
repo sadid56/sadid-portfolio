@@ -15,7 +15,7 @@ const Experience = () => {
           
             <div className='text-center space-y-2 transform transition duration-500 hover:scale-110'>
                 <img className='w-10 mx-auto' src={Projects} alt="" />
-                <h2 className='text-3xl font-bold text-[#03e9f4]'>3</h2>
+                <h2 className='text-3xl font-bold text-[#03e9f4]'>10+</h2>
                 <h4 className='text-xl text-gray-400 font-medium'>Projects Complete</h4>
             </div>
           
