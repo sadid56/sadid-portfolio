@@ -13,9 +13,9 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import helloAnimation from "../../../assets/lottie-animation/hello.json";
 import "./banner.css";
-import Aos from "aos";
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
+// import Aos from "aos";
+// import 'aos/dist/aos.css';
+// import { useEffect } from "react";
 import resume from '../../../assets/images/resume.png'
 const Banner = () => {
   // useEffect(() => {
@@ -25,7 +25,7 @@ const Banner = () => {
   //   });
   // }, []);
   return (
-    <div className="w-full bg-grad py-5 px-5 pt-24 md:pt-0">
+    <div className=" bg-grad py-5 px-5 pt-24 md:pt-0">
       <div className="flex  flex-col-reverse md:flex-row h-screen pt-10 items-center gap-10 max-w-6xl mx-auto">
         <div className="text-white flex-1  md:w-1/2 space-y-3">
           <div className=" font-semibold uppercase flex items-center gap-3">
@@ -41,9 +41,10 @@ const Banner = () => {
             {/* Style will be inherited from the parent element */}
             <Typewriter
               words={[
-                "MERN stack Developer",
-                "React Developer",
-                "Web Designer",
+                "MERN stack Developer.",
+                "Frontend Developer.",
+                "React Developer.",
+                "Web Designer.",
               ]}
               loop={Infinity}
               cursor

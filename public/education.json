@@ -1,13 +1,5 @@
 [
     {
-        "id": 1,
-        "education_name":"Complete web development course",
-        "year":2023,
-        "intitude_name": "Programming hero",
-        "result": "Pending...",
-        "description":"Programming Hero offers a comprehensive MERN stack web development course to kickstart my career.Programming Hero provides a complete MERN stack development program, equipping you with the skills to build modern web applications. Join us on the path to becoming a proficient MERN stack developer."
-    },
-    {
         "id": 2,
         "education_name":"HSC Education",
         "year":"2020-2022",

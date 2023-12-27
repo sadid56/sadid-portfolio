@@ -14,6 +14,9 @@ import "swiper/css";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import projectAnimation from "../../../assets/lottie-animation/projects.json";
 import Lottie from "lottie-react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const Projects = () => {
   const [selectedTechnology, setSelectedTechnology] = useState(null);
@@ -38,8 +41,14 @@ const Projects = () => {
   const handleSlideChange = (swiper) => {
     setCurrentProjectIndex(swiper.realIndex);
   };
+  useEffect(() => {
+    Aos.init({
+      duration: 500, 
+      // offset: 200,
+    });
+  }, []);
   return (
-    <section className="max-w-6xl mx-auto">
+    <section className="max-w-6xl mx-auto overflow-hidden">
       <SectionTitle color={"Projects"} />
       <div className="grid grid-cols-1  md:grid-cols-2 gap-5 md:gap-20">
         <div className="order-2 md:order-1 mx-5">
@@ -48,6 +57,8 @@ const Projects = () => {
           </h2>
          
           <Swiper
+          data-aos="fade-up"
+     data-aos-duration="1000"
             effect={"cards"}
             centeredSlides={true}
             slidesPerView={1}
@@ -173,7 +184,7 @@ const Projects = () => {
             <div id="swiper-button-next" className="swiper-button-next"></div> */}
           </Swiper>
         </div>
-        <div className="md:w-[400px] order-1 md:order-2 md:ml-20">
+        <div data-aos="fade-down-left" className="md:w-[400px] order-1 md:order-2 md:ml-20">
           <Lottie animationData={projectAnimation} />
         </div>
       </div>

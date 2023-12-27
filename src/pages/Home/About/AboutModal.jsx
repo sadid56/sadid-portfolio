@@ -67,10 +67,10 @@ const AboutModal = () => {
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
               <span className="text-[#03e9f4] font-bold">Language</span>:
-              Bangla, Hindi, English,
+              Bangla, Hindi, English (Basic),
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">
-              <span className="text-[#03e9f4] font-bold">Role</span>: React
+              <span className="text-[#03e9f4] font-bold">Role</span>: Frontend
               Developer,
             </h3>
             <h3 className="text-slate-400 text-xl font-medium">

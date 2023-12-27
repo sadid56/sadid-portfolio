@@ -42,7 +42,7 @@ const Navber = () => {
         <ul
           className={`text-white flex uppercase  text-sm  cursor-pointer ${
             isToggle
-              ? "flex-col absolute md:block top-20 right-0 bg-slate-900  md:bg-transparent p-16 rounded-l-sm shadow-2xl"
+              ? "flex-col absolute md:block top-0 left-0 min-h-screen bg-slate-900  md:bg-transparent w-1/2 pt-10  rounded-l-sm shadow-2xl"
               : "hidden md:flex"
           } items-center gap-7`}>
           <li>
@@ -53,7 +53,7 @@ const Navber = () => {
               smooth={true}
               duration={500}
               offset={-50}
-              className={`group transition duration-300 ${
+              className={`group transition duration-300  ${
                 !sroll ? "homeActive" : undefined
               }`}>
               Home
@@ -126,7 +126,7 @@ const Navber = () => {
           </li>
         </ul>
         <button
-          className="md:hidden text-3xl"
+          className="md:hidden text-3xl transform-all duration-300 z-50"
           onClick={() => setIsToggle(!isToggle)}>
           {isToggle ? <IoMdClose /> : <FiAlignJustify />}
         </button>
