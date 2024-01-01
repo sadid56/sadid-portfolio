@@ -22,7 +22,7 @@ const Loading = () => {
   }, []);
 
   return (
-    <div className="flex h-[80vh] md:h-[100vh] items-center justify-center bg-white">
+    <div className="flex h-[100vh] items-center justify-center bg-white">
       <div>
         <div className="glitch-text flex gap-5 items-center">
           <h2 data-aos="fade-right" className="last-text">S</h2>
