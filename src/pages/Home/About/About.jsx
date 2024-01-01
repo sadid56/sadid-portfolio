@@ -18,7 +18,7 @@ const About = () => {
   
   return (
   
-    <section id="about" className="max-w-6xl mx-auto relative overflow-x-hidden">
+    <section  className="max-w-6xl mx-auto relative overflow-x-hidden">
       <SectionTitle color={"About"} text={"Me"} />
         <div className="flex md:px-20 py-5 gap-5 flex-col md:flex-row items-center mt-10 bg-slate-900 rounded-md bg-opacity-60 mx-3">
           <div className="flex-1 relative ">
@@ -49,7 +49,7 @@ const About = () => {
       </div>
         </div>
        
-        <div  data-aos="zoom-in" data-aos-duration="500">
+        <div  data-aos="zoom-in" data-aos-duration="1000">
         <Experience/>
         </div>
 

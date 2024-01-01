@@ -16,6 +16,7 @@ import earthAnimation from "../../../assets/lottie-animation/earth.json";
 import { useEffect, useState } from "react";
 import "./Home.css"; 
 import Loading from "../../shared/loading/Loading";
+import Gallery from "../Gallery/Gallery";
 
 const LoadingSpinner = () => {
   return (
@@ -64,10 +65,10 @@ const Home = () => {
       {isLoading && <LoadingSpinner />}
       {!isLoading && (
         <div>
+          <ParticlesAnimation />
           <Element name="home" className="element">
             <Navber />
           </Element>
-          <ParticlesAnimation />
           <Banner />
           <div className="w-[100px] md:w-[150px] right-4 md:left-24 absolute">
             <Lottie animationData={earthAnimation} />
@@ -94,6 +95,9 @@ const Home = () => {
           </Element>
           <Element name="services" className="element">
             <Services />
+          </Element>
+          <Element name="gallery" className="element">
+            <Gallery/>
           </Element>
           <Element name="contact" className="element">
             <Contact />

@@ -113,6 +113,19 @@ const Navber = () => {
           </li>
           <li>
             <ScrollLink
+              to="gallery"
+              spy={true}
+              activeClass="active"
+              smooth={true}
+              duration={500}
+              offset={-50}
+              className="group transition duration-300">
+              Gallery
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
               to="contact"
               spy={true}
               activeClass="active"

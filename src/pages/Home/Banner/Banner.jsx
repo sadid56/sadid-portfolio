@@ -13,31 +13,31 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import helloAnimation from "../../../assets/lottie-animation/hello.json";
 import "./banner.css";
-// import Aos from "aos";
-// import 'aos/dist/aos.css';
-// import { useEffect } from "react";
-import resume from '../../../assets/images/resume.png'
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const Banner = () => {
-  // useEffect(() => {
-  //   Aos.init({
-  //     duration: 1500, 
-  //     // offset: 200,
-  //   });
-  // }, []);
+  useEffect(() => {
+    Aos.init({
+      duration: 1500, 
+      // offset: 200,
+    });
+  }, []);
   return (
-    <div className=" bg-grad py-5 px-5 pt-24 md:pt-0">
+    <div className="relative bg-grad py-5 px-5 pt-24 md:pt-0">
       <div className="flex  flex-col-reverse md:flex-row h-screen pt-10 items-center gap-10 max-w-6xl mx-auto">
         <div className="text-white flex-1  md:w-1/2 space-y-3">
           <div className=" font-semibold uppercase flex items-center gap-3">
             <div className="w-16 bg-white rounded-md">
               <Lottie animationData={helloAnimation} />
             </div>
-            <h2>There,</h2>
+            <h2 data-aos="fade-right">There,</h2>
           </div>
-          <h1 className="text-4xl font-bold">
-            I'am <span className="text-[#03e9f4]">Sadid</span>,
+          <h1 data-aos="fade-right" className="text-4xl font-bold">
+            I'am <span  className="text-[#03e9f4]">Sadid</span>,
           </h1>
-          <h1 className=" text-3xl md:text-5xl font-bold text-white text-color-change">
+          <h1 data-aos="fade-up"
+            data-aos-duration="2000" className=" text-3xl md:text-5xl font-bold text-white text-color-change">
             {/* Style will be inherited from the parent element */}
             <Typewriter
               words={[
@@ -55,7 +55,8 @@ const Banner = () => {
               delaySpeed={2000}
             />
           </h1>
-          <h1 className=" text-slate-400">
+          <h1 data-aos="fade-down"
+            data-aos-duration="2000" className=" text-slate-400">
             {/* Style will be inherited from the parent element */}
             <Typewriter
               words={[
@@ -68,7 +69,7 @@ const Banner = () => {
             />
           </h1>
          <div className="py-9 relative w-full">
-            <a href={resume} target="_blank" download className="button absolute left-[70px]">
+            <a href={"https://drive.google.com/file/d/1ydJ_AytdyLH0tC8nXqgvWRY9fxbag8cz/view?usp=drive_link"} target="_blank" download className="button absolute left-[70px]">
               <span></span>
               <span></span>
               <span></span>
@@ -94,7 +95,7 @@ const Banner = () => {
             <h3 style={{letterSpacing:'3px'}} className=" uppercase text-sm text-slate-300  z-10">Find with me</h3>
             <div className="find-border"></div>
           </div>
-          <div className="flex items-center gap-5">
+          <div  className="flex items-center gap-5">
           <Link
              to="https://github.com/sadid56"
              target="_blank"

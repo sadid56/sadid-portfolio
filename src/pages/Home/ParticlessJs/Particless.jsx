@@ -20,12 +20,11 @@ const ParticlesAnimation = () => {
             },
           },
           "fullScreen": {
-            "enable": true,
-            "zIndex": -1
+            "enable": true
           },
           particles: {
             number: {
-              value: 50,
+              value: 100,
               density: {
                 enable: false,
               },
