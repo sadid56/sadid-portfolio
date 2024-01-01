@@ -32,7 +32,7 @@ const Navber = () => {
           ? { backdropFilter: "blur(50px)" }
           : { backgroundColor: "transparent" }
       }
-      className={` w-full fixed top-0 z-50  
+      className={` w-full fixed top-0 z-50  transition-all ease-in-out duration-1000
       }`}>
       <div className="flex px-5 justify-between items-center   max-w-6xl mx-auto  py-6 ">
         {/* <h1 className="text-3xl  text-white italic">Sadid</h1> */}
@@ -40,7 +40,7 @@ const Navber = () => {
           <img src={logo} alt="" />
         </div>
         <ul
-          className={`text-white flex uppercase  text-sm  cursor-pointer ${
+          className={`text-white flex uppercase  text-sm  cursor-pointer  transition-all ease-in-out duration-1000 ${
             isToggle
               ? "flex-col absolute md:block top-0 left-0 min-h-screen bg-slate-900  md:bg-transparent w-1/2 pt-10  rounded-l-sm shadow-2xl"
               : "hidden md:flex"
@@ -139,7 +139,7 @@ const Navber = () => {
           </li>
         </ul>
         <button
-          className="md:hidden text-3xl transform-all duration-300 z-50"
+          className="md:hidden text-3xl transform-all duration-1000 z-50"
           onClick={() => setIsToggle(!isToggle)}>
           {isToggle ? <IoMdClose /> : <FiAlignJustify />}
         </button>

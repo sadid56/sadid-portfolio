@@ -45,7 +45,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await new Promise(resolve => setTimeout(resolve, 2500));
+      await new Promise(resolve => setTimeout(resolve, 3000));
       setIsLoading(false);
     };
 
@@ -74,11 +74,11 @@ const Home = () => {
             <Lottie animationData={earthAnimation} />
           </div>
           <div
-            className={`${scrollToTopVisible ? "fixed" : "hidden"} top-[85%] right-5`}
+            className={`${scrollToTopVisible ? "fixed" : "hidden"} top-[85%] right-5 z-50`}
           >
             <button
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn hidden md:flex btn-circle text-xl border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white"
+              className="btn btn-sm md:btn-md btn-circle animate-bounce text-xl border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white "
               onClick={scrollToTop}
             >
               <FaLongArrowAltUp />
@@ -97,7 +97,7 @@ const Home = () => {
             <Services />
           </Element>
           <Element name="gallery" className="element">
-            <Gallery/>
+          <Gallery/>
           </Element>
           <Element name="contact" className="element">
             <Contact />

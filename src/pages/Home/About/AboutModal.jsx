@@ -3,42 +3,12 @@ const AboutModal = () => {
  
   return (
     <div>
-      {/* You can open the modal using document.getElementById('ID').showModal() method */}
-      <button
-        onClick={() => document.getElementById("my_modal_3").showModal()}
-        className="relative text-sm md:text-md uppercase inline-flex bg-transparent items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-slate-400  transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 border border-slate-400 group">
-        <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
-          <svg
-            className="w-5 h-5 text-[#03e9f4]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
-        </span>
-        <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-          <svg
-            className="w-5 h-5 text-slate-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
-        </span>
-        <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-[#03e9f4]">
-          Basic Info
-        </span>
-      </button>
+     
+      <button onClick={() => document.getElementById("my_modal_3").showModal()} className="relative px-6 py-3 font-bold text-white rounded-lg group">
+<span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-[#2accd5] ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+<span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-[#185c60] ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen"></span>
+<span className="relative">Basic Information</span>
+</button>
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box bg-[#09152d]">
           <form method="dialog">

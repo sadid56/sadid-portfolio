@@ -24,7 +24,7 @@ const Banner = () => {
     });
   }, []);
   return (
-    <div className="relative bg-grad py-5 px-5 pt-24 md:pt-0">
+    <div className="relative bg-grad py-5 px-5 pt-5 md:pt-0">
       <div className="flex  flex-col-reverse md:flex-row h-screen pt-10 items-center gap-10 max-w-6xl mx-auto">
         <div className="text-white flex-1  md:w-1/2 space-y-3">
           <div className=" font-semibold uppercase flex items-center gap-3">
@@ -68,7 +68,8 @@ const Banner = () => {
               cursorStyle="."
             />
           </h1>
-         <div className="py-9 relative w-full">
+         <div data-aos="zoom-in"
+            data-aos-duration="2000" className="py-9 relative w-full">
             <a href={"https://drive.google.com/file/d/1ydJ_AytdyLH0tC8nXqgvWRY9fxbag8cz/view?usp=drive_link"} target="_blank" download className="button absolute left-[70px]">
               <span></span>
               <span></span>
@@ -100,34 +101,35 @@ const Banner = () => {
              to="https://github.com/sadid56"
              target="_blank"
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white">
+              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white icon-bounc">
               <FaGithub />
             </Link>
             <Link
               to="https://www.facebook.com/sadidhasan.hasan.5"
               target="_blank"
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white">
+              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white icon-bounc2">
               <FaFacebookF />
             </Link>
             <Link
             to="https://www.linkedin.com/in/sadid-hasan-5b35a62a0/"
             target="_blank"
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white">
+              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white icon-bounc">
               <FaLinkedinIn />
             </Link>
             <Link
             to="https://www.instagram.com/sadidhasan56/"
             target="_blank"
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white">
+              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white icon-bounc2">
               <FaInstagram />
             </Link>
             
           </div>
         </div>
-        <div  className=" md:w-[450px]">
+        <div data-aos="fade-left"
+            data-aos-duration="2000"  className=" md:w-[450px]">
           <Lottie animationData={codingAnimatoin} loop={true} />
         </div>
       </div>

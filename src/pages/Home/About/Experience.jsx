@@ -8,7 +8,7 @@ import CountUp from 'react-countup';
 const Experience = () => {
     
     return (
-        <div className='grid gap-10 mt-10 p-10 md:grid-cols-2 lg:grid-cols-4 bg-slate-900 rounded-md bg-opacity-60 mx-3'>
+        <div className='grid gap-10 mt-10 p-10 md:grid-cols-2 lg:grid-cols-4 experience-style rounded-md bg-opacity-60 mx-3'>
             <div className='text-center space-y-2 transform transition duration-500 hover:scale-110'>
                 <img className='w-10 mx-auto' src={experience} alt="" />
                 <h2 className='text-3xl font-bold text-[#03e9f4]'>1</h2>
