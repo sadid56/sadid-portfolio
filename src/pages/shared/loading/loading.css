@@ -80,10 +80,10 @@
   }
   
   .last-text {
-    animation: animate3 3s ;
+    animation: textAnimate 3s ;
   }
   
-  @keyframes animate3 {
+  @keyframes textAnimate {
     0%{
       transform: translateX(0%);
     }

@@ -69,7 +69,7 @@ const Banner = () => {
             />
           </h1>
          <div data-aos="zoom-in"
-            data-aos-duration="2000" className="py-9 relative w-full">
+            data-aos-duration="2000" className="py-9 relative w-full ">
             <a href={"https://drive.google.com/file/d/1ydJ_AytdyLH0tC8nXqgvWRY9fxbag8cz/view?usp=drive_link"} target="_blank" download className="button absolute left-[70px]">
               <span></span>
               <span></span>
@@ -112,7 +112,7 @@ const Banner = () => {
               <FaFacebookF />
             </Link>
             <Link
-            to="https://www.linkedin.com/in/sadid-hasan-5b35a62a0/"
+            to="https://www.linkedin.com/in/sadid-hasan-6259872a7/"
             target="_blank"
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
               className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white icon-bounc">
