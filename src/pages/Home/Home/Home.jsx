@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import "./Home.css"; 
 import Loading from "../../shared/loading/Loading";
 import Gallery from "../Gallery/Gallery";
+import FooterNav from "../../shared/FooterNav/FooterNav";
 
 const LoadingSpinner = () => {
   return (
@@ -103,6 +104,7 @@ const Home = () => {
             <Contact />
           </Element>
           <Footer />
+          <FooterNav/>
         </div>
       )}
     </div>

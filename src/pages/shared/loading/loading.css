@@ -3,9 +3,13 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    color: black;
+    color: #18ced7;
     position: relative;
     animation: glitch 2s infinite;
+    /* background: linear-gradient(90deg, #03e9f4, #0390f4 , #0bb5be,#03e9f4, #0390f4 , #0bb5be);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite; */
   }
   
   @keyframes glitch {
@@ -22,7 +26,7 @@
       transform: skewX(10deg);
     }
     45% {
-      text-shadow: 1px -1px 0 #0ff, -1px 1px 0 #f0f;
+      text-shadow: 1px -1px 0 rgb(4, 51, 51), -1px 1px 0 #f0f;
       /* transform: skewY(-10deg); */
     }
     60% {
