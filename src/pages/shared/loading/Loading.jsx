@@ -16,7 +16,7 @@ const Loading = () => {
         const newPercentage = prevPercentage + 1;
         return newPercentage <= 100 ? newPercentage : prevPercentage;
       });
-    }, 26);
+    }, 22);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -24,13 +24,16 @@ const Loading = () => {
   return (
     <div className="flex h-[100vh] items-center justify-center bg-white">
       <div>
-        <div className="glitch-text flex gap-5 items-center">
+        {/* <div className="glitch-text flex gap-5 items-center">
           <h2 data-aos="fade-right" className="last-text">S</h2>
           <h2 data-aos="fade-left" className="">a</h2>
           <h2 data-aos="fade-right" className="last-text">d</h2>
           <h2 data-aos="zoom-in" className="">i</h2>
           <h2 data-aos="fade-left" className="last-text">d</h2>
-        </div>
+        </div> */}
+        <div className="loader">
+   <div data-glitch="Sadid :)" className="glitch">Sadid :)</div>
+</div>
         <div>
           <Line
             percent={loadingPercentage}

@@ -46,7 +46,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await new Promise(resolve => setTimeout(resolve, 3000));
+      await new Promise(resolve => setTimeout(resolve, 2500));
       setIsLoading(false);
     };
 
