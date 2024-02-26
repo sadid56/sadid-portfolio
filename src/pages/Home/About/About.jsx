@@ -2,7 +2,7 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import "./About.css";
+import "./about.css";
 import educaitonAnimation from "../../../assets/lottie-animation/education.json";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import aboutImg from "../../../assets/images/me-about.jpg";
