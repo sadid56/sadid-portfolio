@@ -96,7 +96,7 @@ const Contact = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
             className="text-gray-400 font-medium">
-            <small>Bogura, Shajahanpur</small>
+            <small>Bogura, Bangladesh</small>
           </p>
         </div>
         <div className="text-center">

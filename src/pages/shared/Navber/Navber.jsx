@@ -33,9 +33,9 @@ const Navber = () => {
           ? { backdropFilter: "blur(50px)" }
           : { backgroundColor: "transparent" }
       }
-      className={` w-full fixed top-0 z-50  transition-all ease-in duration-1000 
+      className={` w-full fixed top-0 z-50  ${sroll ? "py-6" : "py-4"} transition-all ease-in duration-300 
       }`}>
-      <div className="flex px-5 justify-between items-center   max-w-6xl mx-auto py-4  md:py-6 ">
+      <div className={`flex justify-between items-center   max-w-6xl mx-auto `}>
         {/* name */}
         <div className="w-[120px]">
           <img src={logo} alt="" />
@@ -113,7 +113,7 @@ const Navber = () => {
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </ScrollLink>
           </li>
-          <li>
+          {/* <li>
             <ScrollLink
               to="gallery"
               spy={true}
@@ -125,7 +125,7 @@ const Navber = () => {
               Gallery
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </ScrollLink>
-          </li>
+          </li> */}
           <li>
             <ScrollLink
               to="contact"

@@ -44,7 +44,7 @@ const About = () => {
             and am committed to turning your ideas into powerful online
             realities. Let's collaborate and build something extraordinary.
           </p>
-          <div data-aos="fade-down" data-aos-duration="1000" className="flex items-center gap-4">
+          <div data-aos="fade-up" data-aos-duration="1000" className="flex items-center gap-4">
             <AboutModal />
           </div>
         </div>

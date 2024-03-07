@@ -14,15 +14,14 @@ import ParticlesAnimation from "../ParticlessJs/Particless";
 import Lottie from "lottie-react";
 import earthAnimation from "../../../assets/lottie-animation/earth.json";
 import { useEffect, useState } from "react";
-import "./Home.css"; 
+import "./Home.css";
 import Loading from "../../shared/loading/Loading";
-import Gallery from "../Gallery/Gallery";
 import FooterNav from "../../shared/FooterNav/FooterNav";
 
 const LoadingSpinner = () => {
   return (
     <div className="">
-      <Loading/>
+      <Loading />
     </div>
   );
 };
@@ -46,7 +45,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await new Promise(resolve => setTimeout(resolve, 2500));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       setIsLoading(false);
     };
 
@@ -75,13 +74,13 @@ const Home = () => {
             <Lottie animationData={earthAnimation} />
           </div>
           <div
-            className={`${scrollToTopVisible ? "fixed" : "hidden"} top-[85%] right-5 z-50`}
-          >
+            className={`${
+              scrollToTopVisible ? "fixed" : "hidden"
+            } top-[85%] right-5 z-50`}>
             <button
               style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
               className="btn btn-sm md:btn-md btn-circle animate-bounce text-xl border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white "
-              onClick={scrollToTop}
-            >
+              onClick={scrollToTop}>
               <FaLongArrowAltUp />
             </button>
           </div>
@@ -97,14 +96,14 @@ const Home = () => {
           <Element name="services" className="element">
             <Services />
           </Element>
-          <Element name="gallery" className="element">
-          <Gallery/>
-          </Element>
+          {/* <Element name="gallery" className="element">
+            <Gallery />
+          </Element> */}
           <Element name="contact" className="element">
             <Contact />
           </Element>
           <Footer />
-          <FooterNav/>
+          <FooterNav />
         </div>
       )}
     </div>

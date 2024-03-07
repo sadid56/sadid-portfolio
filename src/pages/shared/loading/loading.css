@@ -75,11 +75,11 @@
   }
 
   60% {
-    transform: skewX(-40deg) skewY(-10deg);
+    transform: skewX(-50deg) skewY(-10deg);
   }
 
   63% {
-    transform: skewX(5deg) skewY(-1deg);
+    transform: skewX(1deg) skewY(-1deg);
   }
 
   70% {

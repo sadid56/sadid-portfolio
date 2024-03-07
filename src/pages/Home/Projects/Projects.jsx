@@ -61,8 +61,9 @@ const Projects = () => {
      data-aos-duration="1000"
             effect={"cards"}
             centeredSlides={true}
-            slidesPerView={1}
-            loop={true}
+            slidesPerView={1
+            }
+            // loop={true}
             grabCursor={true}
             modules={[Autoplay, Pagination, Navigation]}
             // navigation={{
