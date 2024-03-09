@@ -9,13 +9,13 @@ import {
   FaGithub,
   FaDiscord,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import helloAnimation from "../../../assets/lottie-animation/hello.json";
 import "./banner.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Icon from "../../../Components/Icons/Icon";
 const Banner = () => {
   useEffect(() => {
     Aos.init({
@@ -58,14 +58,14 @@ const Banner = () => {
             />
           </h1>
           <h1
-            style={{fontFamily:"cursive"}}
+          
             data-aos="fade-down"
             data-aos-duration="2000"
-            className=" text-slate-400">
+            className=" text-slate-400 font-normal cursive-font">
             {/* Style will be inherited from the parent element */}
             <Typewriter
               words={[
-                `Hi, i'am Sadid, Experienced MERN stack developer skilled in React.js, Node.js/Express, and MongoDB. Committed to creating seamless web experiences with a focus on clean code and user-centric design. Ready to bring technical expertise and innovation to your team`,
+                `Hi, i'am Sadid, Experienced MERN stack developer skilled in React.js, Next.js, Node.js/Express, and MongoDB. Committed to creating seamless web experiences with a focus on clean code and user-centric design. Ready to bring technical expertise and innovation to your team`,
               ]}
               cursor
               cursorColor="white"
@@ -79,11 +79,11 @@ const Banner = () => {
             className="py-9 relative w-full ">
             <a
               href={
-                "https://drive.google.com/file/d/1ydJ_AytdyLH0tC8nXqgvWRY9fxbag8cz/view?usp=drive_link"
+                "https://drive.google.com/file/d/1eHCPgV8b095Agz2hkJB_o7YqoPGGz_C4/view?usp=drive_link"
               }
               target="_blank"
               download
-              className="button absolute left-[70px]">
+              className="button absolute left-[65px]">
               <span></span>
               <span></span>
               <span></span>
@@ -113,34 +113,10 @@ const Banner = () => {
             <div className="find-border"></div>
           </div>
           <div className="flex items-center gap-5">
-            <Link
-              to="https://github.com/sadid56"
-              target="_blank"
-              style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white icon-bounc">
-              <FaGithub />
-            </Link>
-            <Link
-              to="https://www.facebook.com/sadidhasan.hasan.5"
-              target="_blank"
-              style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white icon-bounc2">
-              <FaFacebookF />
-            </Link>
-            <Link
-              to="https://www.linkedin.com/in/sadid-hasan-7126162a8/"
-              target="_blank"
-              style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white icon-bounc">
-              <FaLinkedinIn />
-            </Link>
-            <Link
-              to="https://www.discordapp.com/users/1151169623149002752/"
-              target="_blank"
-              style={{ boxShadow: "0px 0px 10px 2px #03e9f4" }}
-              className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white icon-bounc2">
-              <FaDiscord />
-            </Link>
+            <Icon url={"https://github.com/sadid56"} icon={<FaGithub/>} style={"icon-bounc"}/>
+            <Icon url={"https://www.facebook.com/sadidhasan.hasan.5"} icon={<FaFacebookF/>} style={"icon-bounc2"}/>
+            <Icon url={"https://www.linkedin.com/in/sadid-hasan-1a04a62b7/"} icon={<FaLinkedinIn/>} style={"icon-bounc"}/>
+            <Icon url={"https://www.discordapp.com/users/1151169623149002752/"} icon={<FaDiscord/>} style={"icon-bounc2"}/>
           </div>
         </div>
         <div

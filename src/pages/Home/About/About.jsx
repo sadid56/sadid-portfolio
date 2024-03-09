@@ -35,7 +35,7 @@ const About = () => {
           <h2 data-aos="fade-left" data-aos-duration="1000" className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
             Introduction:
           </h2>
-          <p data-aos="fade-up" data-aos-duration="1000" className="text-gray-400 font-medium">
+          <p data-aos="fade-up" data-aos-duration="1000" className="text-gray-400">
             Hello, I'm Sadid, a skilled MERN stack web developer. With a passion
             for creating seamless digital experiences, I specialize in crafting
             efficient and user-friendly applications. My expertise spans

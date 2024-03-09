@@ -15,7 +15,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import projectAnimation from "../../../assets/lottie-animation/projects.json";
 import Lottie from "lottie-react";
 import Aos from "aos";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Projects = () => {
@@ -43,7 +43,7 @@ const Projects = () => {
   };
   useEffect(() => {
     Aos.init({
-      duration: 500, 
+      duration: 500,
       // offset: 200,
     });
   }, []);
@@ -53,23 +53,20 @@ const Projects = () => {
       <div className="grid grid-cols-1  md:grid-cols-2 gap-5 md:gap-20">
         <div className="order-2 md:order-1 mx-5">
           <h2 className=" font-medium  mb-2 uppercase text-slate-300">
-            Project Number: <span className="text-[#03e9f4] lowercase">{currentProjectIndex + 1} of {projects.length}</span>
+            Project Number:{" "}
+            <span className="text-[#03e9f4] lowercase">
+              {currentProjectIndex + 1} of {projects.length}
+            </span>
           </h2>
-         
+
           <Swiper
-          data-aos="fade-up"
-     data-aos-duration="1000"
+            data-aos="fade-up"
+            data-aos-duration="1000"
             effect={"cards"}
             centeredSlides={true}
-            slidesPerView={1
-            }
-            // loop={true}
+            slidesPerView={1}
             grabCursor={true}
             modules={[Autoplay, Pagination, Navigation]}
-            // navigation={{
-            //   nextEl: "#swiper-button-next",
-            //   prevEl: "#swiper-button-prev",
-            // }}
             autoplay={{ delay: 4000, disableOnInteraction: false }}
             pagination={{
               clickable: true,
@@ -185,7 +182,9 @@ const Projects = () => {
             <div id="swiper-button-next" className="swiper-button-next"></div> */}
           </Swiper>
         </div>
-        <div data-aos="fade-down-left" className="md:w-[400px] order-1 md:order-2 md:ml-20">
+        <div
+          data-aos="fade-down-left"
+          className="md:w-[400px] order-1 md:order-2 md:ml-20">
           <Lottie animationData={projectAnimation} />
         </div>
       </div>

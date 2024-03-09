@@ -1,38 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap");
+
+* {
+  font-family: "Noto Sans Georgian", sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .text-color-change {
-    background: linear-gradient(90deg, #03e9f4, #0390f4 , #0bb5be,#03e9f4, #0390f4 , #0bb5be);
-    background-size: 400%;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: animate 10s linear infinite;
+  background: linear-gradient(
+    90deg,
+    #03e9f4,
+    #0390f4,
+    #0bb5be,
+    #03e9f4,
+    #0390f4,
+    #0bb5be
+  );
+  background-size: 400%;
+  background-clip: text;
+  color: transparent;
+  animation: animate 10s linear infinite;
 }
 
 @keyframes animate {
-    0% {
-        background-position: 0%;
-    }
-    100% {
-        background-position: 400%;
-    }
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, #03e9f4);
-    border-radius: 6px;
+  background: linear-gradient(transparent, #03e9f4);
+  border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(transparent, white);
+  background: linear-gradient(transparent, white);
 }
-
-.section-text{
-    opacity: 0.3;
-}
-
-

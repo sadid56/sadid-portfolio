@@ -147,12 +147,12 @@
 
 
 .icon-bounc{
-  animation: bounce 3s infinite;
+  animation: bounce 4s infinite;
 }
 
 @keyframes bounce {
   0%, 100%{
-    transform: translateY(-25%);
+    transform: translateY(-20%);
     /* animation-timing-function: cubic-bezier(0.8, 0, 1, 15); */
   }
   50% {
@@ -162,7 +162,7 @@
 }
 
 .icon-bounc2{
-  animation: bouns2 3s infinite;
+  animation: bouns2 4s infinite;
 
 }
 @keyframes bouns2 {
@@ -171,7 +171,7 @@
     /* animation-timing-function: cubic-bezier(0.8, 0, 1, 10); */
   }
   50% {
-    transform: translateY(-25%);
+    transform: translateY(-20%);
     /* animation-timing-function: cubic-bezier(0, 0, 0.2, 10); */
   }
 }

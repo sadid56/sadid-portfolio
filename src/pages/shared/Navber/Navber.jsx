@@ -33,7 +33,7 @@ const Navber = () => {
           ? { backdropFilter: "blur(50px)" }
           : { backgroundColor: "transparent" }
       }
-      className={` w-full fixed top-0 z-50  ${sroll ? "py-6" : "py-4"} transition-all ease-in duration-300 
+      className={` w-full fixed top-0 z-50  ${sroll ? "py-6" : "py-4"} transition-all ease-in duration-300 px-3
       }`}>
       <div className={`flex justify-between items-center   max-w-6xl mx-auto `}>
         {/* name */}

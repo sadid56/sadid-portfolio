@@ -17,18 +17,12 @@ const SectionTitle = ({ color, text }) => {
       ref={ref}
       data-aos="fade-up"
       data-aos-duration="1000"
-      className="my-16 w-[200px] mx-auto relative">
-      {/* <h2 className="text-4xl font-semibold text-center text-slate-400">
-        <span className="text-color-change">{color}</span> {text}
-      </h2>
-      <h2 className="text-4xl font-semibold text-center text-slate-400 absolute -bottom-2 right-1 section-text">
-        <span className="text-color-change">{color}</span> {text}
-      </h2> */}
+      className="my-16 relative">
       <h2
         className={`${
           inView && "section-animation-text"
         } flex gap-2 text-color-change`}>
-        <span>{color}</span> <span> {text}</span>
+        <span>{color}</span> <span className="text-white"> {text}</span>
       </h2>
     </div>
   );
