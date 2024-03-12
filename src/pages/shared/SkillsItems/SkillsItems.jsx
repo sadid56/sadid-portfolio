@@ -13,7 +13,7 @@ const SkillsItems = ({ skills }) => {
   return (
     <div className="mt-10 grid grid-cols-2 mx-3  md:grid-cols-4 lg:grid-cols-6 gap-5 ">
       {skills?.map((skill) => (
-        <div data-aos="fade-up" key={skill?.id}>
+        <div data-aos="fade-up" data-aos-duration="2000" key={skill?.id}>
           <div className="skill-card p-4 cursor-pointer rounded-md transform transition duration-500 hover:scale-125 hover:text-slate-900 ">
             <div className="w-10 skill-icon h-10   mx-auto">
               <img

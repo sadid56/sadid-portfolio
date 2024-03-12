@@ -24,27 +24,23 @@ const Loading = () => {
   return (
     <div className="flex h-[100vh] items-center justify-center bg-white">
       <div>
-        {/* <div className="glitch-text flex gap-5 items-center">
-          <h2 data-aos="fade-right" className="last-text">S</h2>
-          <h2 data-aos="fade-left" className="">a</h2>
-          <h2 data-aos="fade-right" className="last-text">d</h2>
-          <h2 data-aos="zoom-in" className="">i</h2>
-          <h2 data-aos="fade-left" className="last-text">d</h2>
-        </div> */}
         <div className="loader">
-   <div data-glitch="Sadid :)" className="glitch">Sadid :)</div>
-</div>
+          <div data-glitch="Sadid :)" className="glitch">
+            Sadid :)
+          </div>
+        </div>
         <div>
           <Line
             percent={loadingPercentage}
-            strokeWidth={6}
+            strokeWidth={5}
             strokeColor="#03e9f4"
             trailColor="#0a2729"
-            trailWidth={6}
+            trailWidth={5}
             strokeLinecap="butt"
           />
           <div className=" font-semibold mt-2 text-slate-700 flex items-center justify-center">
-            {loadingPercentage}% Loading<span className="loading loading-dots loading-xs"></span>
+            {loadingPercentage}% Loading
+            <span className="loading loading-dots loading-xs"></span>
           </div>
         </div>
       </div>

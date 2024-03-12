@@ -24,7 +24,7 @@ const Banner = () => {
     });
   }, []);
   return (
-    <header className="relative bg-grad py-5 px-5 pt-5 md:pt-0">
+    <header className=" relative bg-grad py-5 px-5 pt-5 md:pt-0">
       <div className="flex flex-col-reverse md:flex-row h-screen pt-10 items-center gap-10 max-w-7xl mx-auto">
   
         <div className="text-white flex-1  md:w-1/2 space-y-3">
