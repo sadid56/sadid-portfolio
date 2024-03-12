@@ -24,8 +24,9 @@ const Banner = () => {
     });
   }, []);
   return (
-    <div className="relative bg-grad py-5 px-5 pt-5 md:pt-0">
-      <div className="flex  flex-col-reverse md:flex-row h-screen pt-10 items-center gap-10 max-w-6xl mx-auto">
+    <header className="relative bg-grad py-5 px-5 pt-5 md:pt-0">
+      <div className="flex flex-col-reverse md:flex-row h-screen pt-10 items-center gap-10 max-w-7xl mx-auto">
+  
         <div className="text-white flex-1  md:w-1/2 space-y-3">
           <div className=" font-semibold uppercase flex items-center gap-3">
             <div className="w-16 bg-white rounded-md">
@@ -61,7 +62,7 @@ const Banner = () => {
           
             data-aos="fade-down"
             data-aos-duration="2000"
-            className=" text-slate-400 font-normal cursive-font">
+            className=" text-slate-400 font-normal cursive-font md:w-[90%]">
             {/* Style will be inherited from the parent element */}
             <Typewriter
               words={[
@@ -120,13 +121,13 @@ const Banner = () => {
           </div>
         </div>
         <div
-          data-aos="fade-left"
+          data-aos="fade-zoom-in"
           data-aos-duration="2000"
-          className=" md:w-[500px]">
+          className=" md:w-[530px]">
           <Lottie animationData={codingAnimatoin} loop={true} />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

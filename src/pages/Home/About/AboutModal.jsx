@@ -1,14 +1,22 @@
+import "./about.css";
 import { IoMdClose } from "react-icons/io";
 const AboutModal = () => {
  
   return (
     <div>
      
-      <button onClick={() => document.getElementById("my_modal_3").showModal()} className="relative px-6 py-3 font-bold text-white rounded-lg group">
+      {/* <button  className="relative px-6 py-3 font-bold text-white rounded-lg group">
 <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-[#2accd5] ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0"></span>
 <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-[#185c60] ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen"></span>
 <span className="relative">Basic Information</span>
+</button> */}
+<button onClick={() => document.getElementById("my_modal_3").showModal()} className="about-btn">
+  Basic Info
 </button>
+
+
+
+
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box bg-[#09152d]">
           <form method="dialog">

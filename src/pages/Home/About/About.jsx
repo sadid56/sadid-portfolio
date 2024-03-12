@@ -19,23 +19,26 @@ const About = () => {
   }, []);
 
   return (
-    <section className="max-w-6xl mx-auto relative overflow-x-hidden">
+    <section className="max-w-7xl mx-auto relative overflow-x-hidden">
       <SectionTitle color={"About"} text={"Me"} />
       <div className="flex md:px-20  py-4 md:py-7 gap-5 flex-col md:flex-row items-center mt-10 abot-bg-grad bg-opacity-60  mx-3">
         <div className="flex-1 relative ">
-          <div data-aos="fade-left" className="w-[350px] h-[500px] md:w-[400px] md:h-[560px] bg-[#2bcfd8] absolute md:right-[54px] right-3 md:-top-1 -top-1 rounded-md"></div>
-          <img
-            data-aos="fade-right"
-            src={aboutImg}
-            className="md:w-[400px] rounded-md shadow-2xl pr-4 md:pr-0"
-            alt=""
-          />
+          <div  data-aos="fade-right"
+            data-aos-duration="1000" className="about-img md:w-[400px] md:h-[500px]">
+            <img src={aboutImg} className="rounded object-cover" alt="" />
+          </div>
         </div>
-        <div  className=" flex-1 space-y-8 mx-3">
-          <h2 data-aos="fade-left" data-aos-duration="1000" className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
+        <div className=" flex-1 space-y-8 mx-3">
+          <h2
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
             Introduction:
           </h2>
-          <p data-aos="fade-up" data-aos-duration="1000" className="text-gray-400">
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="text-gray-400">
             Hello, I'm Sadid, a skilled MERN stack web developer. With a passion
             for creating seamless digital experiences, I specialize in crafting
             efficient and user-friendly applications. My expertise spans
@@ -44,7 +47,10 @@ const About = () => {
             and am committed to turning your ideas into powerful online
             realities. Let's collaborate and build something extraordinary.
           </p>
-          <div data-aos="fade-up" data-aos-duration="1000" className="flex items-center gap-4">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="flex items-center gap-4">
             <AboutModal />
           </div>
         </div>

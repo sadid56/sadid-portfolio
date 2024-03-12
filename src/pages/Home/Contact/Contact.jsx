@@ -49,7 +49,7 @@ const Contact = () => {
     });
   }, []);
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       <SectionTitle color={"Contact"} text={"Me"} />
       {/* address */}
       <div
@@ -125,7 +125,7 @@ const Contact = () => {
       <div data-aos="fade-up" data-aos-duration="2000" className="mt-10">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="text-xl text-center md:text-start font-medium mb-5 text-slate-400">
-            Have a <span className="text-[#03e9f4]">Question</span>?
+            Have a any <span className="text-[#03e9f4]">Question</span>?
           </h2>
           <div className="flex  flex-col md:flex-row items-center  gap-10">
             <div className="flex-1 space-y-6">

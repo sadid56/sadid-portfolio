@@ -48,7 +48,7 @@ const Projects = () => {
     });
   }, []);
   return (
-    <section className="max-w-6xl mx-auto  overflow-hidden">
+    <section className="max-w-7xl mx-auto  overflow-hidden">
       <SectionTitle color={"Projects"} />
       <div className="grid grid-cols-1  md:grid-cols-2 gap-5 md:gap-20">
         <div className="order-2 md:order-1 mx-5">

@@ -35,13 +35,13 @@ const Navber = () => {
       }
       className={` w-full fixed top-0 z-50  ${sroll ? "py-6" : "py-4"} transition-all ease-in duration-300 px-3
       }`}>
-      <div className={`flex justify-between items-center   max-w-6xl mx-auto `}>
+      <div className={`flex justify-between items-center   max-w-7xl mx-auto `}>
         {/* name */}
         <div className="w-[120px]">
           <img src={logo} alt="" />
         </div>
         {/* ul content */}
-        <ul
+        <ul 
           className={`text-white flex uppercase  text-sm  cursor-pointer   ${
             isToggle
               ? "flex-col absolute md:block top-0 left-0 min-h-screen bg-slate-900  md:bg-transparent w-[70%] pt-14  rounded-l-sm shadow-2xl "
@@ -49,6 +49,7 @@ const Navber = () => {
           } items-center gap-7`}>
           <li>
             <ScrollLink
+            onClick={()=>setIsToggle(false)}
               to="home"
               activeClass="active"
               spy={true}
@@ -64,6 +65,7 @@ const Navber = () => {
           </li>
           <li>
             <ScrollLink
+            onClick={()=>setIsToggle(false)}
               to="about"
               spy={true}
               smooth={true}
@@ -76,6 +78,7 @@ const Navber = () => {
           </li>
           <li>
             <ScrollLink
+            onClick={()=>setIsToggle(false)}
               to="skills"
               spy={true}
               activeClass="active"
@@ -89,6 +92,7 @@ const Navber = () => {
           </li>
           <li>
             <ScrollLink
+            onClick={()=>setIsToggle(false)}
               to="projects"
               spy={true}
               activeClass="active"
@@ -102,6 +106,7 @@ const Navber = () => {
           </li>
           <li>
             <ScrollLink
+            onClick={()=>setIsToggle(false)}
               to="services"
               spy={true}
               activeClass="active"
@@ -113,21 +118,10 @@ const Navber = () => {
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
             </ScrollLink>
           </li>
-          {/* <li>
-            <ScrollLink
-              to="gallery"
-              spy={true}
-              activeClass="active"
-              smooth={true}
-              duration={500}
-              offset={-50}
-              className="group transition duration-300">
-              Gallery
-              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[#03e9f4]"></span>
-            </ScrollLink>
-          </li> */}
+          
           <li>
             <ScrollLink
+            onClick={()=>setIsToggle(false)}
               to="contact"
               spy={true}
               activeClass="active"
