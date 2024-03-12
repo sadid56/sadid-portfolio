@@ -42,8 +42,7 @@ const EducationTabs = () => {
             </Tab>
           ))}
         </TabList>
-        <TabPanel  data-aos="fade-down-right"
-            data-aos-duration="1000">
+        <TabPanel  >
           <EducationTabContent educations={hscData} />
         </TabPanel>
         <TabPanel>

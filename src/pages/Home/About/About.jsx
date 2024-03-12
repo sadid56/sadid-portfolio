@@ -19,7 +19,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="max-w-7xl mx-auto relative overflow-x-hidden">
+    <section className="max-w-7xl mx-auto relative ">
       <SectionTitle color={"About"} text={"Me"} />
       <div className="flex md:px-20  py-4 md:py-7 gap-5 flex-col md:flex-row items-center mt-10 abot-bg-grad bg-opacity-60  mx-3">
         <div className="flex-1 relative ">
