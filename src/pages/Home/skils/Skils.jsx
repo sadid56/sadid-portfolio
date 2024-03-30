@@ -15,7 +15,7 @@ const Skils = () => {
     });
   }, []);
   return (
-    <section className="max-w-7xl mx-auto ">
+    <section className="max-w-7xl md:mx-auto mx-3">
       <SectionTitle color={'My Skills'}/>
       <div data-aos="fade-down"
      data-aos-duration="1000" className="mt-10">

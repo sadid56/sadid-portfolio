@@ -5,6 +5,7 @@ import axios from "axios";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import SkillsItems from "../../shared/SkillsItems/SkillsItems";
 import { useState } from "react";
+import "./skills.css"
 
 const SkillsTabs = () => {
   const [currentTab, setCurrentTab] = useState("Expertise");
@@ -36,9 +37,9 @@ const SkillsTabs = () => {
           {tabsArray.map((tabArray) => (
             <Tab
               onClick={() => setCurrentTab(tabArray)}
-              className={`outline-none cursor-pointer font-semibold text-gray-300 bg-[#092152] px-4 py-2 rounded-md ${
+              className={`tab-btn ${
                 currentTab === tabArray
-                  ? "border-b-2 border-[#03e9f4]"
+                  ? "tab-active"
                   : undefined
               }`}
               key={tabArray}>

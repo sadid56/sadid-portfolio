@@ -3,12 +3,7 @@
 import Lottie from "lottie-react";
 import codingAnimatoin from "../../../assets/lottie-animation/coding.json";
 import { Typewriter } from "react-simple-typewriter";
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaGithub,
-  FaDiscord,
-} from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaGithub, FaDiscord } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 import helloAnimation from "../../../assets/lottie-animation/hello.json";
 import "./banner.css";
@@ -25,16 +20,20 @@ const Banner = () => {
   }, []);
   return (
     <header className=" relative bg-grad py-5 px-5 pt-5 md:pt-0">
-      <div className="flex flex-col-reverse md:flex-row h-screen pt-10 items-center gap-10 max-w-7xl mx-auto">
-        
-        <div className="text-white flex-1  md:w-1/2 space-y-3">
+      <div className="flex flex-col-reverse lg:flex-row h-screen pt-10 items-center gap-10 max-w-7xl mx-auto">
+        <div className="text-white flex-1  lg:w-1/2 space-y-3">
           <div className=" font-semibold uppercase flex items-center gap-3">
             <div className="w-16 bg-white rounded-md">
               <Lottie animationData={helloAnimation} />
             </div>
-            <h2 data-aos="fade-right" data-aos-duration="2000">There,</h2>
+            <h2 data-aos="fade-right" data-aos-duration="2000">
+              There,
+            </h2>
           </div>
-          <h1 data-aos="fade-right" data-aos-duration="2000" className="text-4xl font-bold">
+          <h1
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            className="text-4xl font-bold">
             I'am <span className="text-[#03e9f4]">Sadid</span>,
           </h1>
           <h1
@@ -59,7 +58,6 @@ const Banner = () => {
             />
           </h1>
           <h1
-          
             data-aos="fade-down"
             data-aos-duration="2000"
             className=" text-slate-400 font-normal cursive-font md:w-[90%]">
@@ -113,11 +111,27 @@ const Banner = () => {
             </h3>
             <div className="find-border"></div>
           </div>
-          <div  className="flex items-center gap-5">
-            <Icon url={"https://github.com/sadid56"} icon={<FaGithub/>} style={"icon-bounc"}/>
-            <Icon url={"https://www.facebook.com/sadidhasan.hasan.5"} icon={<FaFacebookF/>} style={"icon-bounc2"}/>
-            <Icon url={"https://www.linkedin.com/in/sadid-hasan-1a04a62b7/"} icon={<FaLinkedinIn/>} style={"icon-bounc"}/>
-            <Icon url={"https://www.discordapp.com/users/1151169623149002752/"} icon={<FaDiscord/>} style={"icon-bounc2"}/>
+          <div className="flex items-center gap-5">
+            <Icon
+              url={"https://github.com/sadid56"}
+              icon={<FaGithub />}
+              style={"icon-bounc"}
+            />
+            <Icon
+              url={"https://www.facebook.com/sadidhasan.hasan.5"}
+              icon={<FaFacebookF />}
+              style={"icon-bounc2"}
+            />
+            <Icon
+              url={"https://www.linkedin.com/in/sadid-hasan-1a04a62b7/"}
+              icon={<FaLinkedinIn />}
+              style={"icon-bounc"}
+            />
+            <Icon
+              url={"https://www.discordapp.com/users/1151169623149002752/"}
+              icon={<FaDiscord />}
+              style={"icon-bounc2"}
+            />
           </div>
         </div>
         <div
@@ -127,6 +141,17 @@ const Banner = () => {
           <Lottie animationData={codingAnimatoin} loop={true} />
         </div>
       </div>
+      <ScrollLink
+        to="about"
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-50}
+        className="container_mouse hidden lg:block">
+        <span className="mouse-btn">
+          <span className="mouse-scroll"></span>
+        </span>
+      </ScrollLink>
     </header>
   );
 };
