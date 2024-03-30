@@ -7,7 +7,7 @@ import SkillsItems from "../../shared/SkillsItems/SkillsItems";
 import { useState } from "react";
 
 const SkillsTabs = () => {
-  const [currentTab, setCurrentTab] = useState("Front-End");
+  const [currentTab, setCurrentTab] = useState("Expertise");
   const { data: skills = [] } = useQuery({
     queryKey: ["skills"],
     queryFn: async () => {
@@ -16,16 +16,16 @@ const SkillsTabs = () => {
     },
   });
 
-  const tabsArray = ["Front-End", "Backend", "Experts", "Tools"];
+  const tabsArray = ["Expertise", "Comfortable", "Familiar", "Tools"];
 
   const FrontEndData = skills.filter(
-    (frontEnd) => frontEnd?.category === "Front-End"
+    (frontEnd) => frontEnd?.category === "Expertise"
   );
   const BackendData = skills.filter(
-    (Backend) => Backend?.category === "Backend"
+    (Backend) => Backend?.category === "Comfortable"
   );
   const ExpertsData = skills.filter(
-    (Experts) => Experts?.category === "Experts"
+    (Experts) => Experts?.category === "Familiar"
   );
   const OthersData = skills.filter((other) => other?.category === "Tools");
 

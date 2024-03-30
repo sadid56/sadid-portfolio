@@ -11,8 +11,6 @@ import Footer from "../Footer/Footer";
 import { FaLongArrowAltUp } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import ParticlesAnimation from "../ParticlessJs/Particless";
-import Lottie from "lottie-react";
-import earthAnimation from "../../../assets/lottie-animation/earth.json";
 import { useEffect, useState } from "react";
 import "./Home.css";
 import Loading from "../../shared/loading/Loading";
@@ -70,9 +68,6 @@ const Home = () => {
             <Navber />
           </Element>
           <Banner />
-          <div className="w-[100px] md:w-[150px] right-4 md:left-24 absolute">
-            <Lottie animationData={earthAnimation} />
-          </div>
           <div
             className={`${
               scrollToTopVisible ? "fixed" : "hidden"

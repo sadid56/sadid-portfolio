@@ -52,7 +52,7 @@ const Projects = () => {
       <SectionTitle color={"Projects"} />
       <div className="grid grid-cols-1  md:grid-cols-2 gap-5 md:gap-20">
         <div className="order-2 md:order-1 mx-5">
-          <h2 className=" font-medium  mb-2 uppercase text-slate-300">
+          <h2 className=" font-medium  mb-2 uppercase text-slate-300 relative">
             Project Number:{" "}
             <span className="text-[#03e9f4] lowercase">
               {currentProjectIndex + 1} of {projects.length}
@@ -184,7 +184,7 @@ const Projects = () => {
         </div>
         <div
           data-aos="fade-down-left"
-          className="md:w-[400px] order-1 md:order-2 md:ml-20">
+          className="md:w-[450px] order-1 md:order-2 md:ml-20">
           <Lottie animationData={projectAnimation} />
         </div>
       </div>

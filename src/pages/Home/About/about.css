@@ -93,9 +93,7 @@
     border-radius: 8px;
   }
   
-  .education-card:hover {
-    transform: scale(1.04) rotate(1deg);
-  }
+
   
   .circle {
     width: 100px;

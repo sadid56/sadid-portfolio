@@ -12,30 +12,8 @@ const EducationTabContent = ({ educations }) => {
     });
   }, []);
   return (
-    <div className="mx-3 md:mx-1 mb-1 mt-5 md:mt-10">
+    <div className="mx-4 md:mx-1 mb-1 mt-5 md:mt-10">
       {educations.map((education) => (
-        // <div
-        //   style={{ boxShadow: "0px 0px 7px  #03e9f4" }}
-        //   key={education.id}
-        //   className=" rounded-md p-5 space-y-4 h-full ">
-        //   <div className="flex gap-4 md:gap-0 flex-col md:flex-row md:items-center md:justify-between">
-        //     <div>
-        //       <h2 className="text-2xl font-medium text-[#37ccd4]">
-        //         {education?.intitude_name}
-        //       </h2>
-        //       <h2 className="text-[18px] font-medium">
-        //         {education?.education_name}
-        //       </h2>
-        //     </div>
-        //     <div>
-        //       <h2 className="bg-[#103551] px-2 py-1 w-fit rounded mb-2 font-medium">
-        //         {education?.result}
-        //       </h2>
-        //       <h2 className="font-medium">{education?.year}</h2>
-        //     </div>
-        //   </div>
-        //   <p className="text-gray-400">{education.description}</p>
-        // </div>
         <div key={education.id} className="education-card h-fit md:h-[300px]">
           <div
             data-aos="fade-down"
@@ -52,15 +30,15 @@ const EducationTabContent = ({ educations }) => {
                 <h2 className="text-2xl font-medium text-[#37ccd4]">
                   {education?.intitude_name}
                 </h2>
-                <h2 className="text-[18px] font-medium">
+                <h2 className="text-[18px] font-medium text-slate-300">
                   {education?.education_name}
                 </h2>
               </div>
               <div>
-                <h2 className="bg-[#103551] px-2 py-1 w-fit rounded mb-2 font-medium">
+                <h2 className="bg-[#103551] text-slate-400 px-2 py-1 w-fit rounded mb-2 font-medium">
                   {education?.result}
                 </h2>
-                <h2 className="font-medium">{education?.year}</h2>
+                <h2 className="font-medium text-slate-400">{education?.year}</h2>
               </div>
             </div>
             <p className="text-gray-400 mt-5">{education.description}</p>
