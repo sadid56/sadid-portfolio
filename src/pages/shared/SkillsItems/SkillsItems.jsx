@@ -1,22 +1,28 @@
 /* eslint-disable react/prop-types */
+import { useAnimation , motion} from "framer-motion";
 import "./items.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import { useInView } from "react-intersection-observer";
+import useMotionAnimate from "../../../hooks/useMotionAnimate";
 import { useEffect } from "react";
-import "./items.css";
 const SkillsItems = ({ skills }) => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const [downAnimate] = useMotionAnimate();
+
   useEffect(() => {
-    Aos.init({
-      duration: 500,
-      // offset: 200,
-    });
-  }, []);
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
     <div className="mt-10 flex flex-wrap justify-center gap-5 md:gap-10 ">
       {skills?.map((skill) => (
-        <div
-          data-aos="fade-up"
-          data-aos-duration="1500"
+        <motion.div        ref={ref}
+        variants={downAnimate}
+        initial="hidden"
+        animate={control}
           key={skill?.id}
           className="tooltip-container">
           <div className="tooltip">
@@ -42,7 +48,7 @@ const SkillsItems = ({ skills }) => {
               <div className="text">{skill?.name}</div>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

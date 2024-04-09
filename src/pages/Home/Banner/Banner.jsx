@@ -7,38 +7,47 @@ import { FaFacebookF, FaLinkedinIn, FaGithub, FaDiscord } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 import helloAnimation from "../../../assets/lottie-animation/hello.json";
 import "./banner.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Icon from "../../../Components/Icons/Icon";
+import { useAnimation, motion} from "framer-motion";
+import useMotionAnimate from "../../../hooks/useMotionAnimate";
+import { useInView } from "react-intersection-observer";
 const Banner = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const [zoomAnimate, upAnimate, LeftAnimate] = useMotionAnimate();
+
   useEffect(() => {
-    Aos.init({
-      duration: 1500,
-      // offset: 200,
-    });
-  }, []);
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
-    <header className=" relative bg-grad py-5 px-5 pt-5 md:pt-0">
+    <header ref={ref} className=" relative bg-grad py-5 px-5 pt-5 md:pt-0">
       <div className="flex flex-col-reverse lg:flex-row h-screen pt-10 items-center gap-10 max-w-7xl mx-auto">
         <div className="text-white flex-1  lg:w-1/2 space-y-3">
           <div className=" font-semibold uppercase flex items-center gap-3">
             <div className="w-16 bg-white rounded-md">
               <Lottie animationData={helloAnimation} />
             </div>
-            <h2 data-aos="fade-right" data-aos-duration="2000">
+            <motion.h2 className="relative"  variants={LeftAnimate}
+          initial="hidden"
+          animate={control}>
               There,
-            </h2>
+            </motion.h2>
           </div>
-          <h1
-            data-aos="fade-right"
-            data-aos-duration="2000"
+          <motion.h1  variants={upAnimate}
+          initial="hidden"
+          animate={control}
             className="text-4xl font-bold">
             I'am <span className="text-[#03e9f4]">Sadid</span>,
-          </h1>
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="2000"
+          </motion.h1>
+          <motion.h1
+           variants={LeftAnimate}
+           initial="hidden"
+           animate={control}
             className=" text-3xl md:text-5xl font-bold text-white text-color-change">
             {/* Style will be inherited from the parent element */}
             <Typewriter
@@ -56,10 +65,11 @@ const Banner = () => {
               deleteSpeed={30}
               delaySpeed={2000}
             />
-          </h1>
-          <h1
-            data-aos="fade-down"
-            data-aos-duration="2000"
+          </motion.h1>
+          <motion.h1
+           variants={zoomAnimate}
+           initial="hidden"
+           animate={control}
             className=" text-slate-400 font-normal cursive-font md:w-[90%]">
             {/* Style will be inherited from the parent element */}
             <Typewriter
@@ -71,10 +81,11 @@ const Banner = () => {
               typeSpeed={10}
               cursorStyle="."
             />
-          </h1>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="2000"
+          </motion.h1>
+          <motion.div
+            variants={zoomAnimate}
+            initial="hidden"
+            animate={control}
             className="py-9 relative w-full ">
             <a
               href={
@@ -102,8 +113,11 @@ const Banner = () => {
               <span></span>
               Hire me
             </ScrollLink>
-          </div>
-          <div className="flex items-center gap-2 relative">
+          </motion.div>
+         <motion.div  variants={upAnimate}
+          initial="hidden"
+          animate={control}>
+         <div className="flex items-center gap-2 relative mb-2">
             <h3
               style={{ letterSpacing: "3px" }}
               className=" uppercase text-sm text-slate-300  z-10">
@@ -133,13 +147,15 @@ const Banner = () => {
               style={"icon-bounc2"}
             />
           </div>
+         </motion.div>
         </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="2000"
+        <motion.div
+          variants={zoomAnimate}
+          initial="hidden"
+          animate={control}
           className=" md:w-[530px]">
           <Lottie animationData={codingAnimatoin} loop={true} />
-        </div>
+        </motion.div>
       </div>
       <ScrollLink
         to="about"

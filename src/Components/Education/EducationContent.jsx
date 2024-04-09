@@ -1,29 +1,39 @@
 /* eslint-disable react/prop-types */
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
-import "./about.css";
+import "../../pages/Home/About/about.css";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import useMotionAnimate from "../../hooks/useMotionAnimate";
 
 const EducationTabContent = ({ educations }) => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const [zoomAnimate] = useMotionAnimate();
+
   useEffect(() => {
-    Aos.init({
-      duration: 500,
-      // offset: 200,
-    });
-  }, []);
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
     <div className="mx-4 md:mx-1 mb-1 mt-5 md:mt-10">
       {educations.map((education) => (
         <div key={education.id} className="education-card h-fit md:h-[300px]">
-          <div
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            className="circle right-0 -top-5 md:-top-5 md:-left-5"></div>
+          <motion.div
+            ref={ref}
+            variants={zoomAnimate}
+            initial="hidden"
+            animate={control}
+            className="circle right-0 -top-5 md:-top-5 md:-left-5"></motion.div>
           <div className="circle bottom-8 left-5 md:left-auto md:-bottom-5 md:-right-5"></div>
           {/* conent */}
-          <div
-            data-aos="zoom-in"
-            data-aos-duration="1000"
+          <motion.div
+            ref={ref}
+            variants={zoomAnimate}
+            initial="hidden"
+            animate={control}
             className="education-card-inner p-5">
             <div className="flex gap-4 md:gap-0 flex-col md:flex-row md:items-center md:justify-between">
               <div>
@@ -38,11 +48,13 @@ const EducationTabContent = ({ educations }) => {
                 <h2 className="bg-[#103551] text-slate-400 px-2 py-1 w-fit rounded mb-2 font-medium">
                   {education?.result}
                 </h2>
-                <h2 className="font-medium text-slate-400">{education?.year}</h2>
+                <h2 className="font-medium text-slate-400">
+                  {education?.year}
+                </h2>
               </div>
             </div>
             <p className="text-gray-400 mt-5">{education.description}</p>
-          </div>
+          </motion.div>
         </div>
       ))}
     </div>

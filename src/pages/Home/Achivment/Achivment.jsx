@@ -6,11 +6,13 @@ import certificate from "../../../assets/icons/certificate_8123718.png";
 import CountUp from "react-countup";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-
-const Experience = () => {
+import { useAnimation , motion} from "framer-motion";
+import "./Achivement.css"
+const Achievement = () => {
   const [projects, setProjects] = useState(0);
   const [achivement, setAchivement] = useState(0);
-  const { ref, inView } = useInView();
+  const control = useAnimation();
+  const [ref, inView] = useInView();
   useEffect(() => {
     if (inView) {
       setProjects(10);
@@ -20,10 +22,25 @@ const Experience = () => {
       setAchivement(0)
     }
   }, [inView]);
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
+  const AchimentAnimate = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
   return (
-    <div
-      ref={ref}
-      className="grid gap-10 mt-10 p-10 md:grid-cols-2 lg:grid-cols-4 experience-style rounded-md bg-opacity-60 mx-3">
+    <motion.div 
+    ref={ref}
+    variants={AchimentAnimate}
+    initial="hidden"
+    animate={control}
+      className="grid gap-10 mt-10 p-10 md:grid-cols-2 lg:grid-cols-4 Achievement-style rounded-md bg-opacity-60 mx-3 max-w-7xl md:mx-auto">
       <div className="text-center space-y-2 transform transition duration-500 hover:scale-110">
         <img className="w-10 mx-auto" src={experience} alt="" />
         <h2 className="text-3xl font-bold text-[#03e9f4]">1</h2>
@@ -53,8 +70,8 @@ const Experience = () => {
         </h2>
         <h4 className="text-xl text-gray-400 font-medium">Achievement</h4>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
-export default Experience;
+export default Achievement;

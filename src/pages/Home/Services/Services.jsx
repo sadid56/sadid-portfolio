@@ -3,12 +3,16 @@ import axios from "axios";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import "./services.css";
 import { Tilt } from "react-tilt";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import useMotionAnimate from "../../../hooks/useMotionAnimate";
 
 const Services = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const [zoomAnimate, upAnimate] = useMotionAnimate();
   const { data: services = [] } = useQuery({
     queryKey: ["services"],
     queryFn: async () => {
@@ -16,26 +20,28 @@ const Services = () => {
       return res.data;
     },
   });
-  // console.log(services);
   useEffect(() => {
-    Aos.init({
-      duration: 500,
-      offset: 200,
-    });
-  }, []);
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
-    <section className="max-w-7xl mx-auto">
+    <section  ref={ref} className="max-w-7xl mx-auto">
       <SectionTitle color={"My"} text={"Services"} />
       <div className="mx-5">
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
           {services.map((service) => (
-            <li key={service.id}>
+            <li 
+            key={service.id}>
               <div className="timeline-middle">
                 <RiVerifiedBadgeFill className="text-xl text-[#37c5cd]" />
               </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
+              <motion.div 
+         variants={zoomAnimate}
+         initial="hidden"
+         animate={control} 
                 className={`${
                   service.style === "start"
                     ? "timeline-start text-start md:text-end"
@@ -63,7 +69,7 @@ const Services = () => {
                     {service.description}
                   </p>
                 </Tilt>
-              </div>
+              </motion.div>
               <hr />
             </li>
           ))}

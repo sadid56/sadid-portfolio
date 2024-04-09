@@ -4,11 +4,25 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import SkillsItems from "../../shared/SkillsItems/SkillsItems";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./skills.css"
+import { useAnimation , motion} from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import useMotionAnimate from "../../../hooks/useMotionAnimate";
 
 const SkillsTabs = () => {
   const [currentTab, setCurrentTab] = useState("Expertise");
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const [upAnimate] = useMotionAnimate();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   const { data: skills = [] } = useQuery({
     queryKey: ["skills"],
     queryFn: async () => {
@@ -31,8 +45,12 @@ const SkillsTabs = () => {
   const OthersData = skills.filter((other) => other?.category === "Tools");
 
   return (
-    <div>
+    <div ref={ref}>
       <Tabs>
+        <motion.div
+        variants={upAnimate}
+        initial="hidden"
+        animate={control}>
         <TabList className={"flex flex-wrap justify-center gap-5 outline-none"}>
           {tabsArray.map((tabArray) => (
             <Tab
@@ -47,6 +65,7 @@ const SkillsTabs = () => {
             </Tab>
           ))}
         </TabList>
+        </motion.div>
 
         <TabPanel>
           <SkillsItems skills={FrontEndData} />
