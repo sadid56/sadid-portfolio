@@ -1,28 +1,22 @@
 /* eslint-disable react/prop-types */
-import { useAnimation, motion } from "framer-motion";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import "./SectionTitle.css";
 import { useInView } from "react-intersection-observer";
-import useMotionAnimate from "../../hooks/useMotionAnimate";
-import { useEffect } from "react";
 const SectionTitle = ({ color, text }) => {
-  const control = useAnimation();
   const [ref, inView] = useInView();
-  const [upAnimate] = useMotionAnimate();
-
   useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
-
+    Aos.init({
+      duration: 500,
+      // offset: 200,
+    });
+  }, []);
   return (
-    <motion.div
+    <div
       ref={ref}
-      variants={upAnimate}
-      initial="hidden"
-      animate={control}
+      data-aos="fade-up"
+      data-aos-duration="1000"
       className="my-16 relative">
       <h2
         className={`${
@@ -30,7 +24,7 @@ const SectionTitle = ({ color, text }) => {
         } flex gap-2 text-color-change`}>
         <span>{color}</span> <span className="text-white"> {text}</span>
       </h2>
-    </motion.div>
+    </div>
   );
 };
 

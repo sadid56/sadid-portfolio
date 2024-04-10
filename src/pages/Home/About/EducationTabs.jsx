@@ -2,16 +2,12 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import EducationTabContent from "./EducationTabContent";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { useEffect } from "react";
-import EducationTabContent from "./EducationContent";
-import useMotionAnimate from "../../hooks/useMotionAnimate";
-import { useInView } from "react-intersection-observer";
-import { useAnimation, motion } from "framer-motion";
 const EducationTabs = () => {
   const [currentTab, setCurrentTab] = useState("HSC");
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-  const [downAnimate] = useMotionAnimate();
   const { data: educations = [] } = useQuery({
     queryKey: ["education"],
     queryFn: async () => {
@@ -20,23 +16,19 @@ const EducationTabs = () => {
     },
   });
   useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
+    Aos.init({
+      duration: 500,
+      // offset: 200,
+    });
+  }, []);
   const tabsArray = ["HSC", "SSC"];
   const hscData = educations.filter((education) => education?.category === "HSC");
   const sscData = educations.filter((education) => education?.category === "SSC");
   return (
-    <div className="md:w-1/2 relative">
+    <div className="md:w-1/2">
       <Tabs>
-      <motion.div ref={ref}
-            variants={downAnimate}
-            initial="hidden"
-            animate={control}>
-      <TabList  className={"flex flex-wrap justify-center gap-5 outline-none"}>
+        <TabList  data-aos="fade-down"
+            data-aos-duration="1000" className={"flex flex-wrap justify-center gap-5 outline-none"}>
           {tabsArray.map((tabArray) => (
             <Tab
               onClick={() => setCurrentTab(tabArray)}
@@ -50,7 +42,6 @@ const EducationTabs = () => {
             </Tab>
           ))}
         </TabList>
-      </motion.div>
         <TabPanel  >
           <EducationTabContent educations={hscData} />
         </TabPanel>

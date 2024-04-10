@@ -1,34 +1,16 @@
-import { Outlet } from "react-router-dom";
-import Loading from "../shared/loading/Loading";
-import { useEffect, useState } from "react";
-const LoadingSpinner = () => {
-  return (
-    <div className="">
-      <Loading />
-    </div>
-  );
-};
+
+import { Outlet } from 'react-router-dom';
+import Navber from '../shared/Navber/Navber';
+import FooterNav from '../shared/FooterNav/FooterNav';
 
 const Main = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const fetchData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      setIsLoading(false);
-    };
-
-    fetchData();
-  }, []);
-  return (
-    <div>
-      {isLoading && <LoadingSpinner />}
-      {!isLoading && (
-        <>
-          <Outlet />
-        </>
-      )}
-    </div>
-  );
+    return (
+        <div>
+            <Navber/>
+            <Outlet/>
+            <FooterNav/>
+        </div>
+    );
 };
 
 export default Main;
