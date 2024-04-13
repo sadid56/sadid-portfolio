@@ -21,24 +21,20 @@ const Banner = () => {
   return (
     <header className=" relative bg-grad py-5 px-5 pt-5 md:pt-0">
       <div className="flex flex-col-reverse lg:flex-row h-screen pt-10 items-center gap-10 max-w-7xl mx-auto">
-        <div className="text-white flex-1  lg:w-1/2 space-y-3">
+        <div data-aos="fade-right" data-aos-duration="1500" className="text-white flex-1  lg:w-1/2 space-y-3">
           <div className=" font-semibold uppercase flex items-center gap-3">
             <div className="w-16 bg-white rounded-md">
               <Lottie animationData={helloAnimation} />
             </div>
-            <h2 data-aos="fade-right" data-aos-duration="2000">
+            <h2>
               There,
             </h2>
           </div>
           <h1
-            data-aos="fade-right"
-            data-aos-duration="2000"
             className="text-4xl font-bold">
             I'am <span className="text-[#03e9f4]">Sadid</span>,
           </h1>
           <h1
-            data-aos="fade-up"
-            data-aos-duration="2000"
             className=" text-3xl md:text-5xl font-bold text-white text-color-change">
             {/* Style will be inherited from the parent element */}
             <Typewriter
@@ -58,8 +54,6 @@ const Banner = () => {
             />
           </h1>
           <h1
-            data-aos="fade-down"
-            data-aos-duration="2000"
             className=" text-slate-400 font-normal cursive-font md:w-[90%]">
             {/* Style will be inherited from the parent element */}
             <Typewriter
@@ -73,8 +67,6 @@ const Banner = () => {
             />
           </h1>
           <div
-            data-aos="fade-up"
-            data-aos-duration="2000"
             className="py-9 relative w-full ">
             <a
               href={
