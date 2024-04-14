@@ -66,23 +66,26 @@ const About = () => {
                   </button>
                 </div>
               </div>
-              <div className="content space-y-2 md:space-y-10">
-                <h2 className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
-                  Why you hire me?
-                </h2>
-                <p className="mt-5 text-slate-300">
-                  I am a MERN, Frontend or React.js developer and I have
-                  React/Next.js, JavaScript, Tailwindcss, Node.js, express.js,
-                  MongoDB etc skills, I have been working on these skills for a
-                  long time. A few days ago I work a team project and I work
-                  this project 2 months so I think I got used to working with a
-                  team and team collaborattion.
-                </p>
-                <p className="mt-5 text-slate-300">
-                  So if you give me an opportunity to work with your team based
-                  on my skills then I can create any user-friendly smooth web
-                  applications.
-                </p>
+              <div className="content flex flex-col justify-between items-start p-4 md:p-6">
+                <div className="space-y-4 md:space-y-6">
+                  <h2 className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
+                    Why you hire me?
+                  </h2>
+                  <p className="mt-5 text-slate-400 text-sm md:text-[16px]">
+                    I am a MERN, Frontend or React.js developer and I have
+                    React/Next.js, JavaScript, Tailwindcss, Node.js, express.js,
+                    MongoDB etc skills, I have been working on these skills for
+                    a long time. A few days ago I work a team project and I work
+                    this project overall 2 months, So I can collaborate well with any
+                    team and highly motivated to learn and contribute to
+                    creating user-friendly web applications.
+                  </p>
+                  <p className="mt-5 text-slate-400 text-sm md:text-[16px]">
+                    So if you give me an opportunity to work with your team
+                    based on my skills then I can create any user-friendly
+                    smooth web applications.
+                  </p>
+                </div>
                 <button
                   onClick={() => setIsToggle(false)}
                   className="cursor-pointer back-btn flex items-center gap-2 mt-2 ">

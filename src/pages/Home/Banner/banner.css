@@ -12,9 +12,8 @@
 }
 
 .button {
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
   color: #03e9f4;
-  padding: 13px 30px;
   font-size: 18px;
   letter-spacing: 3;
   text-transform: uppercase;
@@ -24,9 +23,8 @@
   overflow: hidden;
 }
 .button2 {
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
   color: #03e9f4;
-  padding: 11px 30px;
   font-size: 18px;
   letter-spacing: 3;
   text-transform: uppercase;

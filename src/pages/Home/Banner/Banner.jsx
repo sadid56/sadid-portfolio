@@ -64,14 +64,14 @@ const Banner = () => {
               cursorStyle="."
             />
           </h1>
-          <div className="py-9 relative w-full ">
+          <div className="py-7 md:py-10 w-full relative">
             <a
               href={
                 "https://drive.google.com/file/d/19jeOu6aglOiyjIJkZbXcAshLzXxIx8EA/view?usp=drive_link"
               }
               target="_blank"
               download
-              className="button absolute left-[65px]">
+              className="button absolute px-4 py-2 md:px-6 md:py-3">
               <span></span>
               <span></span>
               <span></span>
@@ -84,7 +84,7 @@ const Banner = () => {
               smooth={true}
               duration={500}
               offset={-50}
-              className="button2 absolute left-[210px] md:left-[220px] cursor-pointer">
+              className="button2 absolute left-[130px] md:left-[150px] px-4 py-[7px] md:px-6 md:py-[11px] cursor-pointer">
               <span></span>
               <span></span>
               <span></span>
