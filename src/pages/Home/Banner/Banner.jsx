@@ -19,23 +19,22 @@ const Banner = () => {
     });
   }, []);
   return (
-    <header className=" relative bg-grad py-5 px-5 pt-5 md:pt-0">
-      <div className="flex flex-col-reverse lg:flex-row h-screen pt-10 items-center gap-10 max-w-7xl mx-auto">
-        <div data-aos="fade-right" data-aos-duration="1500" className="text-white flex-1  lg:w-1/2 space-y-3">
+    <header className=" relative bg-grad px-5 md:px-0">
+      <div className="flex flex-col-reverse lg:flex-row min-h-screen pt-10 items-center gap-2 md:gap-10 max-w-7xl mx-auto">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          className="text-white flex-1  lg:w-1/2 space-y-3">
           <div className=" font-semibold uppercase flex items-center gap-3">
             <div className="w-16 bg-white rounded-md">
               <Lottie animationData={helloAnimation} />
             </div>
-            <h2>
-              There,
-            </h2>
+            <h2>There,</h2>
           </div>
-          <h1
-            className="text-4xl font-bold">
+          <h1 className="text-4xl font-bold">
             I'am <span className="text-[#03e9f4]">Sadid</span>,
           </h1>
-          <h1
-            className=" text-3xl md:text-5xl font-bold text-white text-color-change">
+          <h1 className=" text-3xl md:text-5xl font-bold text-white text-color-change">
             {/* Style will be inherited from the parent element */}
             <Typewriter
               words={[
@@ -53,8 +52,7 @@ const Banner = () => {
               delaySpeed={2000}
             />
           </h1>
-          <h1
-            className=" text-slate-400 font-normal cursive-font md:w-[90%]">
+          <h1 className=" text-slate-400 font-normal cursive-font md:w-[90%]">
             {/* Style will be inherited from the parent element */}
             <Typewriter
               words={[
@@ -66,8 +64,7 @@ const Banner = () => {
               cursorStyle="."
             />
           </h1>
-          <div
-            className="py-9 relative w-full ">
+          <div className="py-9 relative w-full ">
             <a
               href={
                 "https://drive.google.com/file/d/19jeOu6aglOiyjIJkZbXcAshLzXxIx8EA/view?usp=drive_link"
@@ -87,7 +84,7 @@ const Banner = () => {
               smooth={true}
               duration={500}
               offset={-50}
-              className="button2 absolute left-[220px] cursor-pointer">
+              className="button2 absolute left-[210px] md:left-[220px] cursor-pointer">
               <span></span>
               <span></span>
               <span></span>
@@ -104,25 +101,18 @@ const Banner = () => {
             <div className="find-border"></div>
           </div>
           <div className="flex items-center gap-5">
-            <Icon
-              url={"https://github.com/sadid56"}
-              icon={<FaGithub />}
-              style={"icon-bounc"}
-            />
+            <Icon url={"https://github.com/sadid56"} icon={<FaGithub />} />
             <Icon
               url={"https://www.facebook.com/sadidhasan.hasan.5"}
               icon={<FaFacebookF />}
-              style={"icon-bounc2"}
             />
             <Icon
               url={"https://www.linkedin.com/in/sadid-hasan-1a04a62b7/"}
               icon={<FaLinkedinIn />}
-              style={"icon-bounc"}
             />
             <Icon
               url={"https://www.discordapp.com/users/1151169623149002752/"}
               icon={<FaDiscord />}
-              style={"icon-bounc2"}
             />
           </div>
         </div>

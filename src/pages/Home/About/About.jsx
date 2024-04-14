@@ -35,13 +35,17 @@ const About = () => {
           <div className="card-container">
             <div className={`card ${isToggle ? "back-card" : ""}`}>
               <div className="front-content pr-5">
-                <div className="space-y-10">
-                  <h2 data-aos="fade-left"
-            data-aos-duration="1500" className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
+                <div className="space-y-5 md:space-y-10">
+                  <h2
+                    data-aos="fade-left"
+                    data-aos-duration="1500"
+                    className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
                     Introduction:
                   </h2>
-                  <p data-aos="fade-down"
-            data-aos-duration="1000" className="text-gray-400">
+                  <p
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                    className="text-gray-400">
                     Hello, I'm Sadid, a skilled MERN stack web developer. With a
                     passion for creating seamless digital experiences, I
                     specialize in crafting efficient and user-friendly
@@ -51,8 +55,9 @@ const About = () => {
                     to turning your ideas into powerful online realities. Let's
                     collaborate and build something extraordinary.
                   </p>
-                  <button data-aos="fade-up"
-            data-aos-duration="1500"
+                  <button
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
                     onClick={() => setIsToggle(true)}
                     className="more-btn z-10 hover:text-black ">
                     <p className="z-20 text-slate-300 font-semibold hover:text-black transition-all duration-300">
@@ -61,7 +66,7 @@ const About = () => {
                   </button>
                 </div>
               </div>
-              <div className="content space-y-3 md:space-y-10">
+              <div className="content space-y-2 md:space-y-10">
                 <h2 className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
                   Why you hire me?
                 </h2>
@@ -71,10 +76,10 @@ const About = () => {
                   MongoDB etc skills, I have been working on these skills for a
                   long time. A few days ago I work a team project and I work
                   this project 2 months so I think I got used to working with a
-                  team and team collaborattion. 
+                  team and team collaborattion.
                 </p>
                 <p className="mt-5 text-slate-300">
-                So if you give me an opportunity to work with your team based
+                  So if you give me an opportunity to work with your team based
                   on my skills then I can create any user-friendly smooth web
                   applications.
                 </p>
