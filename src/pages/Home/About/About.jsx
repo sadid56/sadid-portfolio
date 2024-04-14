@@ -6,12 +6,12 @@ import "./about.css";
 import educaitonAnimation from "../../../assets/lottie-animation/education.json";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import aboutImg from "../../../assets/images/me-about.jpg";
-import AboutModal from "./AboutModal";
 import Experience from "./Experience";
 import Lottie from "lottie-react";
 import EducationTabs from "./EducationTabs";
+import { IoMdArrowBack } from "react-icons/io";
 const About = () => {
-  const [isToggle, setIsToggle] = useState(false)
+  const [isToggle, setIsToggle] = useState(false);
   useEffect(() => {
     Aos.init({
       duration: 500,
@@ -50,40 +50,60 @@ const About = () => {
             and am committed to turning your ideas into powerful online
             realities. Let's collaborate and build something extraordinary.
           </p> */}
-        <div className="card-container">
-  <div className={`card ${isToggle ? "back-card" : ""}`}>
-  <div className="front-content pr-5">
-    <div className="space-y-5">
-    <h2
-           
-            className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
-            Introduction:
-          </h2>
-          <p
-           
-            className="text-gray-400">
-            Hello, I'm Sadid, a skilled MERN stack web developer. With a passion
-            for creating seamless digital experiences, I specialize in crafting
-            efficient and user-friendly applications. My expertise spans
-            MongoDB, Express.js, React, and Node.js, allowing me to deliver
-            end-to-end solutions. I thrive on challenges, continuously learn,
-            and am committed to turning your ideas into powerful online
-            realities. Let's collaborate and build something extraordinary.
-          </p> 
-<button onClick={()=>setIsToggle(true)}  className="sideber-btn">
-    Why you hire me?
-</button>
-    </div>
-  </div>
-  <div className="content flex flex-col justify-between items-start">
-    <p className="mt-5">
-    I am a MERN, Frontend or React.js developer and I have React/Next.js, JavaScript, Tailwindcss, Node.js, express.js, MongoDB etc skills, I have been working on these skills for a long time. A few days ago I work a team project and I work this project 2 months so I think I got used to working with a team and team collaborattion. <br /><br />
-     So if you give me an opportunity to work with your team based on my skills then I can create any user-friendly smooth web applications.
-    </p>
-    <button onClick={()=>setIsToggle(false)} className="p-4 cursor-pointer">back</button>
-  </div>
-</div>
-</div>
+          <div className="card-container">
+            <div className={`card ${isToggle ? "back-card" : ""}`}>
+              <div className="front-content pr-5">
+                <div className="space-y-10">
+                  <h2 data-aos="fade-left"
+            data-aos-duration="1500" className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
+                    Introduction:
+                  </h2>
+                  <p data-aos="fade-down"
+            data-aos-duration="1000" className="text-gray-400">
+                    Hello, I'm Sadid, a skilled MERN stack web developer. With a
+                    passion for creating seamless digital experiences, I
+                    specialize in crafting efficient and user-friendly
+                    applications. My expertise spans MongoDB, Express.js, React,
+                    and Node.js, allowing me to deliver end-to-end solutions. I
+                    thrive on challenges, continuously learn, and am committed
+                    to turning your ideas into powerful online realities. Let's
+                    collaborate and build something extraordinary.
+                  </p>
+                  <button data-aos="fade-up"
+            data-aos-duration="1500"
+                    onClick={() => setIsToggle(true)}
+                    className="more-btn z-10 hover:text-black ">
+                    <p className="z-20 text-slate-300 font-semibold hover:text-black transition-all duration-300">
+                      Why you hire me?
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="content flex flex-col justify-between items-start">
+                {/* <div className="content-border"></div> */}
+                <h2 className="text-xl font-semibold border-b-2 w-fit text-[#41c0c7] uppercase">
+                  Why you hire me?
+                </h2>
+                <p className="mt-5 text-slate-300">
+                  I am a MERN, Frontend or React.js developer and I have
+                  React/Next.js, JavaScript, Tailwindcss, Node.js, express.js,
+                  MongoDB etc skills, I have been working on these skills for a
+                  long time. A few days ago I work a team project and I work
+                  this project 2 months so I think I got used to working with a
+                  team and team collaborattion. <br />
+                  <br />
+                  So if you give me an opportunity to work with your team based
+                  on my skills then I can create any user-friendly smooth web
+                  applications.
+                </p>
+                <button
+                  onClick={() => setIsToggle(false)}
+                  className="p-4 cursor-pointer back-btn flex items-center gap-2">
+                  <IoMdArrowBack className="text-xl" /> back
+                </button>
+              </div>
+            </div>
+          </div>
 
           {/* <div
             data-aos="fade-left"
