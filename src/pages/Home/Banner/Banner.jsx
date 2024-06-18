@@ -56,12 +56,14 @@ const Banner = () => {
             <div className="w-16 bg-white rounded-md">
               <Lottie animationData={helloAnimation} />
             </div>
-            <h2>There,</h2>
+            <h2 className="font-Georgian text-slate-300">There,</h2>
           </div>
-          <h1 className="text-4xl font-bold">
+          {/* name */}
+          <h1 className="text-4xl font-medium font-Georgian">
             I'am <span className="text-[#03e9f4]">Sadid</span>,
           </h1>
-          <h1 className=" text-3xl md:text-5xl font-bold text-white text-color-change">
+          {/* intro */}
+          <h1 className=" text-3xl md:text-5xl font-semibold text-white text-color-change font-Georgian">
             {/* Style will be inherited from the parent element */}
             <Typewriter
               words={[
@@ -79,7 +81,8 @@ const Banner = () => {
               delaySpeed={2000}
             />
           </h1>
-          <h1 className=" text-slate-400 font-normal cursive-font md:w-[90%]">
+          {/* description */}
+          <h1 className=" text-slate-400 font-normal cursive-font md:w-[90%] font-italic text-[16px]">
             {/* Style will be inherited from the parent element */}
             <Typewriter
               words={[
@@ -91,6 +94,7 @@ const Banner = () => {
               cursorStyle="."
             />
           </h1>
+          {/* resume and blog buttons */}
           <div className="py-7 md:py-10 w-full relative">
             <a
               href={
@@ -98,7 +102,7 @@ const Banner = () => {
               }
               target="_blank"
               download
-              className="button absolute px-4 py-2 md:px-6 md:py-3"
+              className="button absolute px-4 py-2 md:px-6 md:py-3 font-Georgian"
             >
               <span></span>
               <span></span>
@@ -108,7 +112,7 @@ const Banner = () => {
             </a>
             <button
               onClick={handleBlog}
-              className="button2 absolute left-[130px] md:left-[150px] px-4 py-[7px] md:px-6 md:py-[11px] cursor-pointer"
+              className="button2 absolute font-Georgian left-[130px] md:left-[150px] px-4 py-[7px] md:px-6 md:py-[11px] cursor-pointer"
             >
               My Blog
             </button>
@@ -116,12 +120,13 @@ const Banner = () => {
           <div className="flex items-center gap-2 relative">
             <h3
               style={{ letterSpacing: "3px" }}
-              className=" uppercase text-sm text-slate-300  z-10"
+              className=" uppercase text-[12px] font-medium text-slate-300  z-10 font-italic"
             >
               Find with me
             </h3>
             <div className="find-border"></div>
           </div>
+          {/* social media */}
           <div className="flex items-center gap-5">
             <Icon url={"https://github.com/sadid56"} icon={<FaGithub />} />
             <Icon
@@ -138,6 +143,7 @@ const Banner = () => {
             />
           </div>
         </div>
+        {/* coding animation */}
         <div
           data-aos="fade-up"
           data-aos-duration="2000"

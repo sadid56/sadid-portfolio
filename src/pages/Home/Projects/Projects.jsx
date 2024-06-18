@@ -52,13 +52,13 @@ const Projects = () => {
       <SectionTitle color={"Projects"} />
       <div className="grid grid-cols-1  md:grid-cols-2 gap-5 md:gap-20">
         <div className="order-2 md:order-1 mx-5">
-          <h2 className=" font-medium  mb-2 uppercase text-slate-300 relative">
+          <h2 className=" font-medium  mb-2 uppercase text-slate-300 relative font-Georgian">
             Project Number:{" "}
             <span className="text-[#03e9f4] lowercase">
               {currentProjectIndex + 1} of {projects.length}
             </span>
           </h2>
-
+         {/* slider auto */}
           <Swiper
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -93,7 +93,8 @@ const Projects = () => {
                 </div>
                 <div className="mt-2">
                   <div className="flex items-center justify-between my-4">
-                    <h1 className="text-xl text-gray-300 font-medium uppercase relative">
+                    {/* project name */}
+                    <h1 className="text-xl text-gray-300 font-medium uppercase relative font-Georgian">
                       {project?.project_name}
                       <span className="border-b-2 border-gradient"></span>
                     </h1>

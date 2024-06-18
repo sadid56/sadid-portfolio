@@ -33,7 +33,7 @@ const EducationTabs = () => {
           {tabsArray.map((tabArray) => (
             <Tab
               onClick={() => setCurrentTab(tabArray)}
-              className={`outline-none cursor-pointer font-semibold text-gray-300 bg-[#092152] px-4 py-2 rounded-md ${
+              className={`outline-none cursor-pointer font-semibold text-gray-300 bg-[#092152] px-4 py-2 rounded-md font-Georgian ${
                 currentTab === tabArray
                   ? "border-b-2 border-[#03e9f4]"
                   : undefined

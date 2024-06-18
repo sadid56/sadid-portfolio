@@ -21,7 +21,7 @@ const SkillsItems = ({ skills }) => {
           className="tooltip-container">
           <div className="tooltip">
             <div className="side">
-              <div className="about">{skill?.side}</div>
+              <div className="about font-Georgian">{skill?.side}</div>
             </div>
           </div>
           <div className="text">
@@ -39,7 +39,7 @@ const SkillsItems = ({ skills }) => {
                   />
                 </span>
               </div>
-              <div className="text">{skill?.name}</div>
+              <div className="text font-italic">{skill?.name}</div>
             </div>
           </div>
         </div>

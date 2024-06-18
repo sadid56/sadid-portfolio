@@ -3,9 +3,9 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import SkillsItems from "../../shared/SkillsItems/SkillsItems";
 import { useState } from "react";
 import "./skills.css"
+import SkillsItems from "../../../Components/SkillsItems/SkillsItems";
 
 const SkillsTabs = () => {
   const [currentTab, setCurrentTab] = useState("Expertise");
@@ -37,7 +37,7 @@ const SkillsTabs = () => {
           {tabsArray.map((tabArray) => (
             <Tab
               onClick={() => setCurrentTab(tabArray)}
-              className={`tab-btn ${
+              className={`tab-btn font-Georgian ${
                 currentTab === tabArray
                   ? "tab-active"
                   : undefined

@@ -1,20 +1,20 @@
 // Home.js
 import { Element } from "react-scroll";
-import Navber from "../../shared/Navber/Navber";
 import Banner from "../Banner/Banner";
 import About from "../About/About";
 import Skils from "../skils/Skils";
 import Projects from "../Projects/Projects";
 import Services from "../Services/Services";
 import Contact from "../Contact/Contact";
-import Footer from "../Footer/Footer";
 import { FaLongArrowAltUp } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
-import ParticlesAnimation from "../ParticlessJs/Particless";
 import { useEffect, useState } from "react";
 import "./Home.css";
-import Loading from "../../shared/loading/Loading";
-import FooterNav from "../../shared/FooterNav/FooterNav";
+import Loading from "../../../Components/loading/Loading";
+import Navber from "../../../Shared/Navber/Navber";
+import FooterNav from "../../../Shared/FooterNav/FooterNav";
+import ParticlesAnimation from "../../../Components/ParticlessJs/Particless";
+import Footer from "../../../Shared/Footer/Footer";
 
 const LoadingSpinner = () => {
   return (
@@ -97,8 +97,8 @@ const Home = () => {
           <Element name="contact" className="element">
             <Contact />
           </Element>
-          <Footer />
           <FooterNav />
+          <Footer />
         </div>
       )}
     </div>

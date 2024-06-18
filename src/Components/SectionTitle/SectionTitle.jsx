@@ -22,7 +22,7 @@ const SectionTitle = ({ color, text }) => {
         className={`${
           inView && "section-animation-text"
         } flex gap-2 text-color-change`}>
-        <span>{color}</span> <span className="text-white"> {text}</span>
+        <span>{color}</span> <span className="text-slate-300"> {text}</span>
       </h2>
     </div>
   );

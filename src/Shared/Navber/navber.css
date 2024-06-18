@@ -23,7 +23,7 @@
 }
 
 .nav-link::after {
-  bottom: 8px;
+  bottom: 9px;
 }
 
 .nav-link:hover::before {

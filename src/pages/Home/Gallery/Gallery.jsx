@@ -4,6 +4,7 @@ import Marquee from "react-fast-marquee";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import './gallery.css'
 
+// currently off this section
 const Gallery = () => {
     const { data: photos = [] } = useQuery({
         queryKey: ["photos"],

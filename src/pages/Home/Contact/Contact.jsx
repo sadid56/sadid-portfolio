@@ -10,7 +10,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const personalInfo = [
-  { id: 1, type: "phone", label: "WhatsApp", value: "+88 01739859756", icon: phonePng,},
+  { id: 1, type: "phone", label: "WhatsApp", value: "+880 1739859756", icon: phonePng,},
   { id: 2, type: "home", label: "Home", value: "Bogura, Bangladesh", icon: homePng, },
   { id: 3, type: "email", label: "Email", value: "sadidhasan56@gmail.com", icon: EmailPng, },
 ];
@@ -78,14 +78,14 @@ const Contact = () => {
             <h2
               data-aos="fade-up"
               data-aos-duration="2000"
-              className="text-xl font-medium text-[#03e9f4]"
+              className="text-xl font-medium text-[#03e9f4] font-Georgian"
             >
               {info.label}
             </h2>
             <p
               data-aos="fade-down"
               data-aos-duration="2000"
-              className="text-gray-400 font-medium"
+              className="text-gray-400 font-medium font-Georgian"
             >
               <small>{info.value}</small>
             </p>
@@ -95,7 +95,7 @@ const Contact = () => {
 
       <div data-aos="fade-up" data-aos-duration="2000" className="mt-10">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="text-xl text-center md:text-start font-medium mb-5 text-slate-400">
+          <h2 className="text-xl text-center md:text-start font-medium mb-5 text-slate-400k font-Georgian">
             Have a any <span className="text-[#03e9f4]">Question</span>?
           </h2>
 

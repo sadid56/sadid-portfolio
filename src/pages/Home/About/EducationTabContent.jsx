@@ -27,21 +27,21 @@ const EducationTabContent = ({ educations }) => {
             className="education-card-inner p-5">
             <div className="flex gap-4 md:gap-0 flex-col md:flex-row md:items-center md:justify-between">
               <div>
-                <h2 className="text-2xl font-medium text-[#37ccd4]">
+                <h2 className="text-2xl font-medium text-[#37ccd4] font-Georgian">
                   {education?.institution_name}
                 </h2>
-                <h2 className="text-[18px] font-medium text-slate-300">
+                <h2 className="text-[18px] font-medium text-slate-300 font-Georgian">
                   {education?.education_name}
                 </h2>
               </div>
               <div>
-                <h2 className="bg-[#103551] text-slate-400 px-2 py-1 w-fit rounded mb-2 font-medium">
+                <h2 className="bg-[#103551] text-slate-400 px-2 py-1 w-fit rounded mb-2 font-medium font-Georgian">
                   {education?.result}
                 </h2>
-                <h2 className="font-medium text-slate-400">{education?.year}</h2>
+                <h2 className="font-medium text-slate-400 font-Georgian">{education?.year}</h2>
               </div>
             </div>
-            <p className="text-gray-400 mt-5">{education.description}</p>
+            <p className="text-gray-400 mt-5 font-italic leading-7">{education.description}</p>
           </div>
         </div>
       ))}

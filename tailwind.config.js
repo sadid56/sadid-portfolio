@@ -9,6 +9,10 @@ export default {
     extend: {
       colors:{
         primary: "#03e9f4"
+      },
+      fontFamily:{
+        italic:["Playwrite DE Grund", "cursive"],
+        Georgian:["Noto Sans Georgian", "sans-serif"]
       }
     },
   },
