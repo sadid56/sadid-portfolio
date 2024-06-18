@@ -11,6 +11,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Icon from "../../../Components/Icons/Icon";
+import Swal from "sweetalert2";
 const Banner = () => {
   useEffect(() => {
     Aos.init({
@@ -18,13 +19,39 @@ const Banner = () => {
       // offset: 200,
     });
   }, []);
+  const handleBlog = () => {
+    let timerInterval;
+    Swal.fire({
+      title: "Opps!",
+      icon: "info",
+      html: "My blog is coming soon! #StayTuned <br/> <span>Close in <b></b></span>",
+      timer: 2500,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const timer = Swal.getPopup().querySelector("b");
+        timerInterval = setInterval(() => {
+          timer.textContent = `${Swal.getTimerLeft()}`;
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      },
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log("I was closed by the timer");
+      }
+    });
+  };
   return (
     <header className=" relative bg-grad px-5 md:px-0">
       <div className="flex flex-col-reverse lg:flex-row min-h-screen pt-10 items-center gap-2 md:gap-10 max-w-7xl mx-auto">
         <div
           data-aos="fade-right"
           data-aos-duration="1500"
-          className="text-white flex-1  lg:w-1/2 space-y-3">
+          className="text-white flex-1 space-y-3  md:space-y-5"
+        >
           <div className=" font-semibold uppercase flex items-center gap-3">
             <div className="w-16 bg-white rounded-md">
               <Lottie animationData={helloAnimation} />
@@ -71,31 +98,26 @@ const Banner = () => {
               }
               target="_blank"
               download
-              className="button absolute px-4 py-2 md:px-6 md:py-3">
+              className="button absolute px-4 py-2 md:px-6 md:py-3"
+            >
               <span></span>
               <span></span>
               <span></span>
               <span></span>
               Resume
             </a>
-            <ScrollLink
-              to="contact"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              className="button2 absolute left-[130px] md:left-[150px] px-4 py-[7px] md:px-6 md:py-[11px] cursor-pointer">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Hire me
-            </ScrollLink>
+            <button
+              onClick={handleBlog}
+              className="button2 absolute left-[130px] md:left-[150px] px-4 py-[7px] md:px-6 md:py-[11px] cursor-pointer"
+            >
+              My Blog
+            </button>
           </div>
           <div className="flex items-center gap-2 relative">
             <h3
               style={{ letterSpacing: "3px" }}
-              className=" uppercase text-sm text-slate-300  z-10">
+              className=" uppercase text-sm text-slate-300  z-10"
+            >
               Find with me
             </h3>
             <div className="find-border"></div>
@@ -119,7 +141,8 @@ const Banner = () => {
         <div
           data-aos="fade-up"
           data-aos-duration="2000"
-          className=" md:w-[530px]">
+          className="w-full flex-1"
+        >
           <Lottie animationData={codingAnimatoin} loop={true} />
         </div>
       </div>
@@ -129,7 +152,8 @@ const Banner = () => {
         smooth={true}
         duration={500}
         offset={-50}
-        className="container_mouse hidden lg:block">
+        className="container_mouse hidden lg:block"
+      >
         <span className="mouse-btn">
           <span className="mouse-scroll"></span>
         </span>

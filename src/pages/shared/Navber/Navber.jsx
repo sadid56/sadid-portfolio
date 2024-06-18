@@ -37,7 +37,7 @@ const Navber = () => {
   return (
     <>
       <nav
-        className={`w-full fixed top-0 z-50 ${scroll ? "md:py-8 py-6 backdrop-blur-3xl" : "py-4 bg-transparent"} transition-all ease-in duration-300 px-3`}
+        className={`w-full fixed top-0 z-50 ${scroll ? "md:py-8 py-6 backdrop-blur-3xl" : "py-3 bg-transparent"} transition-all ease-in duration-300 px-3`}
       >
         <div className={`flex justify-between items-center max-w-7xl mx-auto`}>
           <div className="w-32">
@@ -45,7 +45,10 @@ const Navber = () => {
           </div>
           {/* mobile device */}
           <ul
-            className={`text-white flex flex-col md:hidden items-center gap-7 uppercase text-sm cursor-pointer  ${ isToggle ? "sidebar-open" : "sidebar-closed"} `}>
+            className={`text-white flex flex-col md:hidden items-center gap-10 uppercase text-sm cursor-pointer  ${ isToggle ? "sidebar-open" : "sidebar-closed"} `}>
+            <div className="w-32">
+            <img src={logo} alt="" />
+          </div>
             {links.map((nav, i) => (
               <li key={i + 1}>
                 <ScrollLink
@@ -81,7 +84,7 @@ const Navber = () => {
           </ul>
           {/* condition bar in mobile device */}
           <button
-            className={`md:hidden text-3xl transition-transform duration-300 ease-in-out ${isToggle ? "transform rotate-45" : ""}`}
+            className={`md:hidden text-3xl transition-transform duration-300 pr-3 ease-in-out ${isToggle ? "transform rotate-45" : ""}`}
             onClick={() => setIsToggle(!isToggle)}
           >
             <div className="bar"></div>

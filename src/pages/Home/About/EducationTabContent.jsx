@@ -28,7 +28,7 @@ const EducationTabContent = ({ educations }) => {
             <div className="flex gap-4 md:gap-0 flex-col md:flex-row md:items-center md:justify-between">
               <div>
                 <h2 className="text-2xl font-medium text-[#37ccd4]">
-                  {education?.intitude_name}
+                  {education?.institution_name}
                 </h2>
                 <h2 className="text-[18px] font-medium text-slate-300">
                   {education?.education_name}

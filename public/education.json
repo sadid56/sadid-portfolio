@@ -1,9 +1,18 @@
 [
     {
+        "id": 1,
+        "education_name": "Bachelor of Social Science in Sociology",
+        "year": "2024",
+        "institution_name": "Azizul Haque College, Bogura",
+        "result": "Pending...",
+        "description": "I am currently pursuing my Bachelor of Social Science degree with a major in Sociology at Azizul Haque College, Bogura. This educational pursuit represents a significant step forward in my academic journey, building upon my previous achievements in the Higher Secondary Certificate (HSC) examination.",
+        "category": "BSS"
+    },
+    {
         "id": 2,
         "education_name":"HSC Education",
         "year":"2020-2022",
-        "intitude_name": "Rural Development Academy, Bogura",
+        "institution_name": "Rural Development Academy, Bogura",
         "result": "GPA-5.00",
         "description":" In 2022, I successfully completed the Higher Secondary Certificate (HSC) examination, marking a pivotal moment in my academic journey. This achievement demonstrates my commitment to learning and signifies my readiness for higher education or entry into the professional world. It lays the groundwork for future aspirations and endeavors.",
         "category": "HSC"
@@ -12,7 +21,7 @@
         "id": 3,
         "education_name":"SSC Education",
         "year":"2020",
-        "intitude_name": "Jamunna Palli Bandhu High School",
+        "institution_name": "Jamunna Palli Bandhu High School",
         "result": "GPA-5.00",
         "description":"In 2020, I successfully passed the Secondary School Certificate (SSC) examination, marking a significant milestone in my educational journey. This achievement reflects my dedication to academic excellence and sets the foundation for future educational pursuits and career endeavors.",
         "category": "SSC"

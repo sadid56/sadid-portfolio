@@ -7,7 +7,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 const EducationTabs = () => {
-  const [currentTab, setCurrentTab] = useState("HSC");
+  const [currentTab, setCurrentTab] = useState("BSS");
   const { data: educations = [] } = useQuery({
     queryKey: ["education"],
     queryFn: async () => {
@@ -21,7 +21,8 @@ const EducationTabs = () => {
       // offset: 200,
     });
   }, []);
-  const tabsArray = ["HSC", "SSC"];
+  const tabsArray = ["BSS","HSC", "SSC"];
+  const bssData = educations.filter((education) => education?.category === "BSS");
   const hscData = educations.filter((education) => education?.category === "HSC");
   const sscData = educations.filter((education) => education?.category === "SSC");
   return (
@@ -42,6 +43,9 @@ const EducationTabs = () => {
             </Tab>
           ))}
         </TabList>
+        <TabPanel  >
+          <EducationTabContent educations={bssData} />
+        </TabPanel>
         <TabPanel  >
           <EducationTabContent educations={hscData} />
         </TabPanel>
