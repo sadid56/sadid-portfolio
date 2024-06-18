@@ -1,5 +1,5 @@
 ## Hello there, welcome to my github😊
-## This is a my personal portfolio website
+### This is a my personal portfolio website
 ### Technologies:
 - React
 - Tailwindcss
