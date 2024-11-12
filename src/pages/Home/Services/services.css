@@ -1,9 +1,11 @@
-.card-grad{
-    width: 100%;
-    background: linear-gradient(to top right, #05163b,#010610,#010610,#010610, #092152, #010610);
-  }
-.card-grad:hover{
-  box-shadow: 0px 0px  10px #0ca0c2;
-  /* transition: 0.001ms; */
+.card-grad {
+  width: 100%;
+  background: linear-gradient(to top right, #05163b, #010610, #010610, #010610, #092152, #010610);
+}
+
+.card-grad:hover {
+  box-shadow: 0px 0px 10px #0ca0c2;
   cursor: pointer;
 }
+
+

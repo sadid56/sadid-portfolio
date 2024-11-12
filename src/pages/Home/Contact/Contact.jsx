@@ -126,6 +126,7 @@ const Contact = () => {
                 {...register("number")}
                 required
               />
+            
             </div>
 
             <div className="flex-1">

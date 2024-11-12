@@ -45,8 +45,8 @@ const Banner = () => {
     });
   };
   return (
-    <header className=" relative bg-grad px-5 md:px-0">
-      <div className="flex flex-col-reverse lg:flex-row min-h-screen pt-10 items-center gap-2 md:gap-10 max-w-7xl mx-auto">
+    <header className=" relative bg-grad px-5 md:px-0 ">
+      <div className="flex flex-col-reverse lg:flex-row h-[900px] pt-10 items-center gap-2 md:gap-10 max-w-7xl mx-auto">
         <div
           data-aos="fade-right"
           data-aos-duration="1500"

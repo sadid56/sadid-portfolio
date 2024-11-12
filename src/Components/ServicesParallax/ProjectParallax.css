@@ -1,0 +1,17 @@
+.snap-container {
+  width: calc(80vw * 3); /* Adjusting the width according to the number of panels */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.panel {
+  width: 50vw;
+  height: 300px;
+  margin: 0 5vw; /* Centering the panels */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

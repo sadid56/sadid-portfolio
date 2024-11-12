@@ -17,6 +17,11 @@ import Lottie from "lottie-react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const [selectedTechnology, setSelectedTechnology] = useState(null);
@@ -58,7 +63,7 @@ const Projects = () => {
               {currentProjectIndex + 1} of {projects.length}
             </span>
           </h2>
-         {/* slider auto */}
+          {/* slider auto */}
           <Swiper
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -79,11 +84,13 @@ const Projects = () => {
               },
             }}
             onSlideChange={handleSlideChange}
-            className="mySwiper">
+            className="mySwiper"
+          >
             {projects.map((project, index) => (
               <SwiperSlide
                 key={project?.id}
-                className="project-card p-3 rounded-md ">
+                className="project-card p-3 rounded-md "
+              >
                 <div className=" h-48 overflow-y-auto ">
                   <img
                     src={project?.project_thumnail}
@@ -102,7 +109,8 @@ const Projects = () => {
                       <button
                         style={{ boxShadow: "0px 0px 8px 0px #03e9f4" }}
                         className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white text-xl"
-                        onClick={() => handleTechnologyClick(index)}>
+                        onClick={() => handleTechnologyClick(index)}
+                      >
                         {selectedTechnology === index ? (
                           <IoMdClose />
                         ) : (
@@ -130,7 +138,8 @@ const Projects = () => {
                       <button
                         style={{ boxShadow: "0px 0px 8px 0px #03e9f4" }}
                         className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white text-xl"
-                        onClick={() => handleGithubClick(index)}>
+                        onClick={() => handleGithubClick(index)}
+                      >
                         {selectedGithub === index ? (
                           <IoMdClose />
                         ) : (
@@ -146,7 +155,8 @@ const Projects = () => {
                                 project?.project_source[0]?.client_github_link
                               }
                               target="_blank"
-                              rel="noreferrer">
+                              rel="noreferrer"
+                            >
                               Front End
                               <FaGithub />
                             </a>
@@ -158,7 +168,8 @@ const Projects = () => {
                                 project?.project_source[1]?.server_github_link
                               }
                               target="_blank"
-                              rel="noreferrer">
+                              rel="noreferrer"
+                            >
                               Backend
                               <FaGithub />
                             </a>
@@ -170,7 +181,8 @@ const Projects = () => {
                         className="btn btn-circle btn-sm border bg-transparent border-[#03e9f4] hover:bg-[#34c5cd] hover:text-white text-[#03e9f4] hover:border-white text-xl"
                         href={project?.project_source[2]?.live_link}
                         target="_blank"
-                        rel="noreferrer">
+                        rel="noreferrer"
+                      >
                         <TbWorld />
                       </a>
                     </div>
@@ -185,11 +197,13 @@ const Projects = () => {
         </div>
         <div
           data-aos="fade-down-left"
-          className="md:w-[450px] order-1 md:order-2 md:ml-20">
+          className="md:w-[450px] order-1 md:order-2 md:ml-20"
+        >
           <Lottie animationData={projectAnimation} />
         </div>
       </div>
     </section>
+   
   );
 };
 

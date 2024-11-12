@@ -79,7 +79,7 @@ const Home = () => {
               <FaLongArrowAltUp />
             </button>
           </div>
-          <Element name="about" className="element">
+          <Element id="about" name="about" className="element">
             <About />
           </Element>
           <Element name="skills" className="element">

@@ -72,6 +72,36 @@
 
 
 
+.snap-container {
+  width: calc(80vw * 3); 
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-type: x mandatory;
+  flex-wrap: nowrap;
+}
+.panel {
+  width: 80vw;
+  height: 300px;
+  margin: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+}
+
+.red {
+  background: red;
+}
+
+.orange {
+  background: orange;
+}
+
+.purple {
+  background: purple;
+}
 
 
 
